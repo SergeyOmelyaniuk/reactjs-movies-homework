@@ -1,0 +1,10 @@
+.wrapMovies {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 0 -40px;
+}
+
+.wrapMovie {
+	margin: 0px 40px 40px 40px;
+}

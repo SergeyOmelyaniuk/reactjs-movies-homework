@@ -1,0 +1,21 @@
+.pagination {
+	display: flex;
+}
+
+.item {
+	width: 40px;
+	height: 40px;
+	font-size: 18px;
+	margin-right: 10px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 40px;
+	border: 1px solid transparent;
+	cursor: pointer;
+	&:hover {
+		border: 1px solid #3cb43a;
+	}
+	&.active {
+		background-color: #3cb43a;
+	}
+}
