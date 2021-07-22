@@ -1,0 +1,90 @@
+.actorDescription {
+	display: flex;
+}
+
+.wrapPhotoActor {
+	max-width: 425px;
+	width: 100%;
+	height: 640px;
+	margin-right: 40px;
+	flex-shrink: 0;
+}
+
+.photoActor {
+	height: 100%;
+	max-width: 100%;
+	display: block;
+	border-radius: 5px;
+}
+
+.infoActor {
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.nameActor {
+	font-size: 46px;
+	margin-bottom: 50px;
+}
+
+.wrapBirthdayActor {
+	margin-bottom: 50px;
+}
+
+.birthdayActor {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.dateBirthdayActor {
+	font-size: 20px;
+}
+
+.wrapPlaceBirthActor {
+	margin-bottom: 50px;
+}
+
+.titlePlaceBirthActor {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.placeBirthActor {
+	font-size: 20px;
+}
+
+.wrapBiographyActor {
+	margin-bottom: 55px;
+}
+.titleBiographyActor {
+	display: block;
+	margin-bottom: 10px;
+}
+.textBiographyActor {
+	line-height: 1.5;
+	font-size: 20px;
+}
+
+.titlePhotosActor {
+	font-size: 28px;
+	display: block;
+	margin-bottom: 30px;
+}
+
+.wrapPhotosActor {
+	display: flex;
+}
+
+.wrapPhotoSmallActor {
+	max-width: 150px;
+	width: 100%;
+	height: 230px;
+	margin-right: 40px;
+}
+
+.photoSmallActor {
+	height: 100%;
+	max-width: 100%;
+	display: block;
+	border-radius: 5px;
+}

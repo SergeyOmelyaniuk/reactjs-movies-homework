@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
-import Main from './pages/Main';
+import ActorProfile from './pages/ActorProfile';
+// import Main from './pages/Main';
 import Header from './сomponents/Header';
 
 function App() {
@@ -8,9 +9,9 @@ function App() {
 		<div className='wrapper'>
 			<Header />
 			<div className='container'>
-				<Main />
+				{/* <Main /> */}
 				{/* <MovieDetails /> */}
-				{/* <ActorProfile /> */}
+				<ActorProfile />
 			</div>
 		</div>
 	);
