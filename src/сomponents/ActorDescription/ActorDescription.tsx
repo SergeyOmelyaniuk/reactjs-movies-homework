@@ -13,17 +13,17 @@ function ActorDescription() {
 			</div>
 			<div className={styles.infoActor}>
 				<h2 className={styles.nameActor}>Actor Name</h2>
-				<div className={styles.wrapBirthdayActor}>
-					<span className={styles.birthdayActor}>Birthday:</span>
-					<p className={styles.dateBirthdayActor}>1959-04-15</p>
+				<div className={styles.textBlock}>
+					<span className={styles.title}>Birthday:</span>
+					<p className={styles.date}>1959-04-15</p>
 				</div>
-				<div className={styles.wrapPlaceBirthActor}>
-					<span className={styles.titlePlaceBirthActor}>Place of birth: </span>
+				<div className={styles.textBlock}>
+					<span className={styles.title}>Place of birth: </span>
 					<p className={styles.placeBirthActor}>Paddington, London, England</p>
 				</div>
-				<div className={styles.wrapBiographyActor}>
-					<span className={styles.titleBiographyActor}>Biography:</span>
-					<p className={styles.textBiographyActor}>
+				<div className={styles.textBlock}>
+					<span className={styles.title}>Biography:</span>
+					<p className={styles.text}>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, in
 						reprehenderit esse, magni aliquam ea expedita voluptates beatae
 						soluta quae rem? Molestias eligendi delectus omnis veniam fugiat
