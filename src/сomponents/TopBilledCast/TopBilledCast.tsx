@@ -1,8 +1,13 @@
 import React from 'react';
 import ActorCard from '../ActorCard';
 import styles from './TopBilledCast.module.scss';
+import { Actor } from '../../types';
 
-function TopBilledCast() {
+interface TopBilledCastProps {
+	actors: Actor[];
+}
+
+function TopBilledCast(props: TopBilledCastProps) {
 	return (
 		<div className={styles.topBilledCast}>
 			<div className={styles.header}>
@@ -10,12 +15,9 @@ function TopBilledCast() {
 				<button className={styles.button}>Show all</button>
 			</div>
 			<div className={styles.wrap}>
-				<ActorCard />
-				<ActorCard />
-				<ActorCard />
-				<ActorCard />
-				<ActorCard />
-				<ActorCard />
+				{props.actors.map((actor) => (
+					<ActorCard key={actor.name} actor={actor} />
+				))}
 			</div>
 		</div>
 	);

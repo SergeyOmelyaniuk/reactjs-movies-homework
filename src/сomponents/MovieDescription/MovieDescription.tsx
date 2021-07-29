@@ -1,111 +1,68 @@
 import React from 'react';
 import TopBilledCast from '../TopBilledCast';
 import styles from './MovieDescription.module.scss';
+import { Movie } from '../../types';
 
-function MovieDescription() {
+interface MovieDescriptionProps {
+	movie: Movie;
+}
+
+function MovieDescription(props: MovieDescriptionProps) {
 	return (
 		<div className={styles.movieDescription}>
 			<div className={styles.wrapPhotoMovie}>
 				<img
 					className={styles.photoMovie}
-					src={require(`../../assets/images/movie-card.png`).default}
+					src={require(`../../mocks/images/films/film_1.jpg`).default}
 					alt=''
 				/>
 			</div>
 			<div className={styles.infoMovie}>
 				<span className={styles.title}>Title:</span>
-				<h2 className={styles.nameMovie}>Movie Title</h2>
+				<h2 className={styles.nameMovie}>{props.movie.title}</h2>
 				<div className={styles.textBlock}>
 					<span className={styles.title}>Overview:</span>
-					<p className={styles.text}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, in
-						reprehenderit esse, magni aliquam ea expedita voluptates beatae
-						soluta quae rem? Molestias eligendi delectus omnis veniam fugiat
-						facilis, consequuntur inventore. Lorem ipsum dolor sit amet
-						consectetur adipisicing elit. Quod, in reprehenderit esse, magni
-						aliquam ea expedita voluptates beatae soluta quae rem? Molestias
-						eligendi delectus omnis veniam fugiat facilis, consequuntur
-						inventore.
-					</p>
+					<p className={styles.text}>{props.movie.overview}</p>
 				</div>
 				<div className={styles.textBlock}>
 					<span className={styles.title}>Release date:</span>
-					<p className={styles.number}>2021-05-26</p>
+					<p className={styles.number}>{props.movie.release_date}</p>
 				</div>
 				<div className={styles.textBlock}>
 					<span className={styles.title}>Revenue:</span>
-					<p className={styles.number}>$42 600 000</p>
+					<p className={styles.number}>{`$${props.movie.revenue}`}</p>
 				</div>
 				<div className={styles.textBlock}>
 					<span className={styles.title}>Duration:</span>
-					<p className={styles.number}>2:14</p>
+					<p className={styles.number}>{props.movie.duration}</p>
 				</div>
 				<div className={styles.wrapGenre}>
-					<div className={styles.genre}>Genre-1</div>
-					<div className={styles.genre}>Genre-2</div>
+					{props.movie.genre.map((item) => (
+						<div key={item} className={styles.genre}>
+							{item}
+						</div>
+					))}
 				</div>
 				<div className={styles.wrapTopBilledCast}>
-					<TopBilledCast />
+					<TopBilledCast actors={props.movie.actors} />
 				</div>
 				<div className={styles.blockImages}>
 					<span className={styles.titleImages}>Images</span>
 					<div className={styles.wrapImages}>
-						<div className={styles.wrapImage}>
-							<img
-								className={styles.image}
-								src={require(`../../assets/images/images.png`).default}
-								alt=''
-							/>
-						</div>
-						<div className={styles.wrapImage}>
-							<img
-								className={styles.image}
-								src={require(`../../assets/images/images.png`).default}
-								alt=''
-							/>
-						</div>
-						<div className={styles.wrapImage}>
-							<img
-								className={styles.image}
-								src={require(`../../assets/images/images.png`).default}
-								alt=''
-							/>
-						</div>
-						<div className={styles.wrapImage}>
-							<img
-								className={styles.image}
-								src={require(`../../assets/images/images.png`).default}
-								alt=''
-							/>
-						</div>
-						<div className={styles.wrapImage}>
-							<img
-								className={styles.image}
-								src={require(`../../assets/images/images.png`).default}
-								alt=''
-							/>
-						</div>
-						<div className={styles.wrapImage}>
-							<img
-								className={styles.image}
-								src={require(`../../assets/images/images.png`).default}
-								alt=''
-							/>
-						</div>
-						<div className={styles.wrapImage}>
-							<img
-								className={styles.image}
-								src={require(`../../assets/images/images.png`).default}
-								alt=''
-							/>
-						</div>
-						<div className={styles.wrapImage}>
-							<img
-								className={styles.image}
-								src={require(`../../assets/images/images.png`).default}
-								alt=''
-							/>
-						</div>
+						{props.movie.images.map((image) => {
+							return (
+								<div key={image} className={styles.wrapImage}>
+									<img
+										className={styles.image}
+										src={
+											require(`../../mocks/images/additional_images/${image}`)
+												.default
+										}
+										alt=''
+									/>
+								</div>
+							);
+						})}
 					</div>
 				</div>
 			</div>
