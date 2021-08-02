@@ -7,10 +7,10 @@ import { movies } from '../../mocks/movies';
 function MovieDetails() {
 	return (
 		<div className={styles.movieDetails}>
-			<MovieDescription movie={movies[0]} />
+			<MovieDescription movie={movies.popular[0]} />
 			<div className={styles.recommendations}>
 				<span className={styles.titleRecommendations}>Recommendations</span>
-				<WrapMovies movies={movies} />
+				<WrapMovies movies={movies.upcoming} />
 			</div>
 		</div>
 	);

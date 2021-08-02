@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Header.module.scss';
 import LanguageBar from './LanguageBar';
 import Search from './Search';
+import { languages } from '../../mocks/constants';
 
 function Header() {
 	return (
@@ -9,7 +10,7 @@ function Header() {
 			<div className={styles.container}>
 				<h1 className={styles.title}>title</h1>
 				<Search />
-				<LanguageBar />
+				<LanguageBar languages={languages} />
 			</div>
 		</header>
 	);

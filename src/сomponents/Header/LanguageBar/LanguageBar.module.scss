@@ -1,5 +1,6 @@
 .languageBar {
 	position: relative;
+	background-color: #202020;
 }
 
 .menu {
@@ -19,12 +20,13 @@
 	&:hover {
 		color: black;
 		background-color: #fff;
+		border: 1px solid #202020;
+		border-radius: 3px;
 	}
 }
 
 .popup {
 	display: flex;
-	display: none;
 	position: absolute;
 	background-color: #fff;
 	color: black;
@@ -38,6 +40,7 @@
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
+	z-index: 1;
 	&::after {
 		content: '';
 		position: absolute;

@@ -2,16 +2,24 @@
 	width: 253px;
 	height: 430px;
 	cursor: pointer;
-	//прозрачность придумать
-	// &:hover .movie-card__image {
-	//   background-color:#5d5d5d;
-	// }
 	&:hover .preview {
 		display: block;
 	}
 	&:hover .title {
 		color: #fff;
 	}
+	&:hover .overlay {
+		position: absolute;
+	}
+}
+
+.overlay {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(66, 66, 66, 0.4);
+	border-radius: 5px;
 }
 
 .wrapImage {
@@ -23,7 +31,7 @@
 
 .image {
 	height: 100%;
-	max-width: 100%;
+	width: 100%;
 	display: block;
 	border-radius: 5px;
 }
@@ -36,6 +44,7 @@
 	left: -8px;
 	top: 6px;
 	background-color: #3cb43a;
+	color: #fff;
 	width: 42px;
 	height: 24px;
 	border-radius: 3px;
@@ -62,10 +71,12 @@
 	font-size: 20px;
 	margin-top: 15px;
 	margin-bottom: 12px;
+	line-height: 25px;
 }
 
 .genre {
 	& span {
 		margin-right: 10px;
+		font-size: 14px;
 	}
 }

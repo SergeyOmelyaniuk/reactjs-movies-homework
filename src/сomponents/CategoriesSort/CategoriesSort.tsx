@@ -1,21 +1,35 @@
-import React from 'react';
+import React, { Fragment, MouseEvent } from 'react';
+import { Category } from '../../types';
 import styles from './CategoriesSort.module.scss';
 
-function CategoriesSort() {
+interface CategoriesSortProps {
+	categories: Category[];
+	categoryValue: string;
+	changeCategory: (value: string) => void;
+}
+
+function CategoriesSort(props: CategoriesSortProps) {
+	const handler = (event: MouseEvent) => {
+		props.changeCategory((event.target as HTMLInputElement).value);
+	};
+
 	return (
 		<div className={styles.categoriesSort}>
-			<input
-				id='radio-1'
-				type='radio'
-				name='sort'
-				value='popular'
-				defaultChecked
-			/>
-			<label htmlFor='radio-1'>Popular</label>
-			<input id='radio-2' type='radio' name='sort' value='topRated' />
-			<label htmlFor='radio-2'>Top rated</label>
-			<input id='radio-3' type='radio' name='sort' value='upcoming' />
-			<label htmlFor='radio-3'>Upcoming</label>
+			{props.categories.map((category) => {
+				return (
+					<Fragment key={category.id}>
+						<input
+							onClick={handler}
+							id={`radio-${category.id}`}
+							type='radio'
+							name='sort'
+							value={category.value}
+							defaultChecked={category.value === props.categoryValue}
+						/>
+						<label htmlFor={`radio-${category.id}`}>{category.title}</label>
+					</Fragment>
+				);
+			})}
 		</div>
 	);
 }

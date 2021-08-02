@@ -6,6 +6,7 @@ function MovieCard(props: { movie: Movie }) {
 	return (
 		<div className={styles.movieCard}>
 			<div className={styles.wrapImage}>
+				<div className={styles.overlay}></div>
 				<img
 					className={styles.image}
 					src={require(`../../mocks/images/films/${props.movie.img}`).default}

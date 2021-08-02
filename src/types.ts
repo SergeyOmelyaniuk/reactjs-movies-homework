@@ -1,3 +1,10 @@
+export interface Movies {
+	[key: string]: Movie[];
+	// popular: Movie[];
+	// top_rated: Movie[];
+	// upcoming: Movie[];
+}
+
 export interface Movie {
 	id: number;
 	img: string;
@@ -21,4 +28,15 @@ export interface Actor {
 	photo: string;
 	photos: string[];
 	character: string;
+}
+
+export interface Category {
+	id: number;
+	value: string;
+	title: string;
+}
+
+export interface Language {
+	title: string;
+	value: string;
 }
