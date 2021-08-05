@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <div
+      class="container"
+    >
+      <h1
+        class="title"
+      >
+        title
+      </h1>
+      <form
+        class="search"
+      >
+        <input
+          class="input"
+          id=""
+          placeholder="Movies, person, movie theaters"
+          type="search"
+        />
+      </form>
+      <div
+        class="languageBar"
+      >
+        <div
+          class="menu"
+        >
+          en
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;

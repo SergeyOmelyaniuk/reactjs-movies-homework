@@ -1,0 +1,18 @@
+.header {
+	background-color: #202020;
+}
+
+.container {
+	min-height: 90px;
+	max-width: 1585px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 36px;
+}

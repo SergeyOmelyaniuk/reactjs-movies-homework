@@ -1,0 +1,27 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.title {
+	font-size: 28px;
+}
+
+.button {
+	background-color: #151515;
+	color: #fff;
+	padding: 6px 9px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	&:hover {
+		background-color: #fff;
+		color: #000;
+	}
+}
+
+.wrap {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 30px;
+}

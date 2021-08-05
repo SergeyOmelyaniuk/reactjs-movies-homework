@@ -1,0 +1,65 @@
+.languageBar {
+	position: relative;
+	background-color: #202020;
+}
+
+.menu {
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	padding: 7px 10px;
+	transition: linear 0.1s;
+	color: #fff;
+	font-weight: 600;
+	text-transform: uppercase;
+	cursor: pointer;
+	&:hover {
+		color: black;
+		background-color: #fff;
+		border: 1px solid #202020;
+		border-radius: 3px;
+	}
+}
+
+.popup {
+	display: flex;
+	position: absolute;
+	background-color: #fff;
+	color: black;
+	font-size: 20px;
+	width: 80px;
+	height: 100px;
+	right: -16px;
+	top: 64px;
+	border-radius: 0px 0px 5px 5px;
+	text-transform: uppercase;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	z-index: 1;
+	&::after {
+		content: '';
+		position: absolute;
+		right: 32px;
+		top: -36px;
+		display: block;
+		border: 8px solid transparent;
+		border-bottom: 10px solid #fff;
+		transform: translateY(100%);
+	}
+}
+
+.item {
+	cursor: pointer;
+	width: 100%;
+	&:first-child {
+		margin-bottom: 20px;
+	}
+	&:hover {
+		font-weight: 700;
+	}
+}
