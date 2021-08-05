@@ -22,12 +22,13 @@ function LanguageBar(props: LanguageBarProps) {
 				{currentlanguage.title}
 			</div>
 			{isPopupVisible && (
-				<ul className={styles.popup}>
+				<ul className={styles.popup} role='menubar'>
 					{props.languages.map((lang) => (
 						<li
 							onClick={() => handler(lang)}
 							key={lang.title}
 							className={styles.item}
+							role='menuitem'
 						>
 							{lang.title}
 						</li>

@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieCard should render 1`] = `
+<div>
+  <div
+    class="movieCard"
+  >
+    <div
+      class="wrapImage"
+    >
+      <div
+        class="overlay"
+      />
+      <img
+        alt=""
+        class="image"
+      />
+      <span
+        class="rating"
+      >
+        68
+      </span>
+      <div
+        class="preview"
+      />
+    </div>
+    <div
+      class="content"
+    >
+      <h2
+        class="title"
+      >
+        Красотка на взводе
+      </h2>
+      <p
+        class="genre"
+      >
+        <span>
+          Боевик
+        </span>
+        <span>
+          Комедия
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+`;

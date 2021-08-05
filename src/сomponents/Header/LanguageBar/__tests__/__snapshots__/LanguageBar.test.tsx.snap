@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LanguageBar should render 1`] = `
+<div>
+  <div
+    class="languageBar"
+  >
+    <div
+      class="menu"
+    >
+      en
+    </div>
+  </div>
+</div>
+`;

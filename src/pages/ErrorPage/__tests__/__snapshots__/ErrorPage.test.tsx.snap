@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorPage should render 1`] = `
+<div>
+  <div
+    class="errorPage"
+  >
+    <div
+      class="wrapImage"
+    >
+      <img
+        alt=""
+        class="image"
+      />
+    </div>
+    <div
+      class="title"
+    >
+      Something went wrong
+    </div>
+    <div
+      class="text"
+    >
+      Please, reload the page or try later
+    </div>
+  </div>
+</div>
+`;

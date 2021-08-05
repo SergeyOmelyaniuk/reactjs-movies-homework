@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActorCard should render 1`] = `
+<div>
+  <div
+    class="actorCard"
+  >
+    <div
+      class="wrapImage"
+    >
+      <img
+        alt=""
+        class="image"
+      />
+    </div>
+    <div
+      class="content"
+    >
+      <h2
+        class="title"
+      >
+        Kate Beckinsale
+      </h2>
+      <p
+        class="character"
+      >
+        Lindy
+      </p>
+    </div>
+  </div>
+</div>
+`;

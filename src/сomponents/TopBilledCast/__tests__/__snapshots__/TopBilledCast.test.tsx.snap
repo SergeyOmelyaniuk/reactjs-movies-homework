@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopBilledCast should render 1`] = `
+<div>
+  <div
+    class="topBilledCast"
+  >
+    <div
+      class="header"
+    >
+      <span
+        class="title"
+      >
+        Top billed cast
+      </span>
+      <button
+        class="button"
+      >
+        Show all
+      </button>
+    </div>
+    <div
+      class="wrap"
+    >
+      <div
+        class="actorCard"
+      >
+        <div
+          class="wrapImage"
+        >
+          <img
+            alt=""
+            class="image"
+          />
+        </div>
+        <div
+          class="content"
+        >
+          <h2
+            class="title"
+          >
+            Kate Beckinsale
+          </h2>
+          <p
+            class="character"
+          >
+            Lindy
+          </p>
+        </div>
+      </div>
+      <div
+        class="actorCard"
+      >
+        <div
+          class="wrapImage"
+        >
+          <img
+            alt=""
+            class="image"
+          />
+        </div>
+        <div
+          class="content"
+        >
+          <h2
+            class="title"
+          >
+            Stanley Tucci
+          </h2>
+          <p
+            class="character"
+          >
+            Dr. Ivan Munchin
+          </p>
+        </div>
+      </div>
+      <div
+        class="actorCard"
+      >
+        <div
+          class="wrapImage"
+        >
+          <img
+            alt=""
+            class="image"
+          />
+        </div>
+        <div
+          class="content"
+        >
+          <h2
+            class="title"
+          >
+            Bobby Cannavale
+          </h2>
+          <p
+            class="character"
+          >
+            Detective Vicars
+          </p>
+        </div>
+      </div>
+      <div
+        class="actorCard"
+      >
+        <div
+          class="wrapImage"
+        >
+          <img
+            alt=""
+            class="image"
+          />
+        </div>
+        <div
+          class="content"
+        >
+          <h2
+            class="title"
+          >
+            Jai Courtney
+          </h2>
+          <p
+            class="character"
+          >
+            Justin
+          </p>
+        </div>
+      </div>
+      <div
+        class="actorCard"
+      >
+        <div
+          class="wrapImage"
+        >
+          <img
+            alt=""
+            class="image"
+          />
+        </div>
+        <div
+          class="content"
+        >
+          <h2
+            class="title"
+          >
+            Laverne Cox
+          </h2>
+          <p
+            class="character"
+          >
+            Detective Nevin
+          </p>
+        </div>
+      </div>
+      <div
+        class="actorCard"
+      >
+        <div
+          class="wrapImage"
+        >
+          <img
+            alt=""
+            class="image"
+          />
+        </div>
+        <div
+          class="content"
+        >
+          <h2
+            class="title"
+          >
+            David Bradley
+          </h2>
+          <p
+            class="character"
+          >
+            Gareth Fizel
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
