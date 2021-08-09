@@ -1,8 +1,5 @@
 export interface Movies {
 	[key: string]: Movie[];
-	// popular: Movie[];
-	// top_rated: Movie[];
-	// upcoming: Movie[];
 }
 
 export interface Movie {

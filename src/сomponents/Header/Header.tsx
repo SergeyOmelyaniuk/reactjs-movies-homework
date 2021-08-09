@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Header.module.scss';
 import LanguageBar from './LanguageBar';
 import Search from './Search';
-import { languages } from '../../mocks/constants';
+import { languages } from '../../constants';
 
 function Header() {
 	return (

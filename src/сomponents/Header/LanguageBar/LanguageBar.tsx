@@ -2,16 +2,28 @@ import React, { useState } from 'react';
 import { Language } from '../../../types';
 import styles from './LanguageBar.module.scss';
 
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../store/store';
+
+import { useDispatch } from 'react-redux';
+import { setCurrentlanguage } from '../../../store/languageSlice';
+
 interface LanguageBarProps {
 	languages: Language[];
 }
 
 function LanguageBar(props: LanguageBarProps) {
-	const [currentlanguage, setCurrentlanguage] = useState(props.languages[0]);
+	const currentlanguage = useSelector(
+		(state: RootState) => state.language.languageSelected
+	);
+
+	const dispatch = useDispatch();
+
 	const [isPopupVisible, togglePopup] = useState(false);
+
 	const handler = (lang: Language) => {
 		if (currentlanguage.title !== lang.title) {
-			setCurrentlanguage(lang);
+			dispatch(setCurrentlanguage(lang));
 			togglePopup(false);
 		}
 	};
