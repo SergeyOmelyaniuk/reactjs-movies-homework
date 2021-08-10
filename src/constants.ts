@@ -1,17 +1,17 @@
 import { Language } from './types';
 
 export const languages: Language[] = [
-	{ title: 'en2', value: 'en-US' },
-	{ title: 'ru2', value: 'ru-RU' },
+	{ title: 'en', value: 'en-US' },
+	{ title: 'ru', value: 'ru-RU' },
 ];
 
 export const translate: any = {
 	en: {
 		title: 'title',
 		categories: [
-			{ id: 1, value: 'popular', title: 'Popular2' },
-			{ id: 2, value: 'top_rated', title: 'Top rated2' },
-			{ id: 3, value: 'upcoming', title: 'Upcoming2' },
+			{ id: 1, value: 'popular', title: 'Popular' },
+			{ id: 2, value: 'top_rated', title: 'Top rated' },
+			{ id: 3, value: 'upcoming', title: 'Upcoming' },
 		],
 	},
 	ru: {

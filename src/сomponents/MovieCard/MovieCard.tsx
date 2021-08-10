@@ -1,15 +1,17 @@
 import React from 'react';
-import { Movie } from '../../types';
+// import { Movie } from '../../types';
 import styles from './MovieCard.module.scss';
 
-function MovieCard(props: { movie: Movie }) {
+//TODO
+// { movie: Movie }
+function MovieCard(props: { movie: any }) {
 	return (
 		<div className={styles.movieCard}>
 			<div className={styles.wrapImage}>
 				<div className={styles.overlay}></div>
 				<img
 					className={styles.image}
-					src={require(`../../mocks/images/films/${props.movie.img}`).default}
+					src={`https://image.tmdb.org/t/p/w500/${props.movie.poster_path}`}
 					alt=''
 				/>
 				<span className={styles.rating}>{props.movie.vote_average}</span>
@@ -18,7 +20,7 @@ function MovieCard(props: { movie: Movie }) {
 			<div className={styles.content}>
 				<h2 className={styles.title}>{props.movie.title}</h2>
 				<p className={styles.genre}>
-					{props.movie.genre.map((item) => (
+					{props.movie.genre_ids.map((item: string) => (
 						<span key={item}>{item}</span>
 					))}
 				</p>

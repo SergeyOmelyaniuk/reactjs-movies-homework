@@ -1,6 +1,5 @@
 .movieCard {
 	width: 253px;
-	height: 430px;
 	cursor: pointer;
 	&:hover .preview {
 		display: block;
@@ -70,13 +69,16 @@
 .title {
 	font-size: 20px;
 	margin-top: 15px;
-	margin-bottom: 12px;
+	margin-bottom: 9px;
 	line-height: 25px;
 }
 
 .genre {
+	line-height: 1.5;
 	& span {
 		margin-right: 10px;
 		font-size: 14px;
+		display: inline-block;
+		color: #858585;
 	}
 }
