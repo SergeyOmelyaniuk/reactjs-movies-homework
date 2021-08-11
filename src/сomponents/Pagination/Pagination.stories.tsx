@@ -27,5 +27,5 @@ const Template: ComponentStory<typeof Pagination> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-	pages: 5,
+	totalPages: 5,
 };

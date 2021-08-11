@@ -19,7 +19,7 @@ function Main() {
 	const categoryValue = useSelector(
 		(state: RootState) => state.films.categoryValue
 	);
-	const pages = useSelector((state: RootState) => state.films.pages);
+	const totalPages = useSelector((state: RootState) => state.films.totalPages);
 	const currentPage = useSelector(
 		(state: RootState) => state.films.currentPage
 	);
@@ -36,6 +36,7 @@ function Main() {
 
 	useEffect(() => {
 		dispatch(fetchFilms());
+		window.scrollTo(0, 0);
 	}, [dispatch, currentPage, categoryValue]);
 
 	return (
@@ -50,7 +51,7 @@ function Main() {
 			<WrapMovies movies={listFilms} />
 			<div className={styles.wrapPagination}>
 				<Pagination
-					pages={pages}
+					totalPages={totalPages}
 					setCurrentPage={hundlerSetCurrentPage}
 					currentPage={currentPage}
 				/>

@@ -1,10 +1,8 @@
 import React from 'react';
-// import { Movie } from '../../types';
+import { Movie } from '../../types';
 import styles from './MovieCard.module.scss';
 
-//TODO
-// { movie: Movie }
-function MovieCard(props: { movie: any }) {
+function MovieCard(props: { movie: Movie }) {
 	return (
 		<div className={styles.movieCard}>
 			<div className={styles.wrapImage}>

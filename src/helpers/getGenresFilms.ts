@@ -1,11 +1,12 @@
-//TODO
-function getGenresFilms(listGenres: any, listFilms: any) {
-	return listFilms.map((film: any) => ({
+import { Genre, Movie, MovieAPI } from '../types';
+
+function getGenresFilms(listGenres: Genre[], listFilms: MovieAPI[]): Movie[] {
+	return listFilms.map((film) => ({
 		...film,
-		genre_ids: film.genre_ids.map(
-			(genreId: any) =>
-				listGenres.find((genre: any) => genre.id === genreId).name
-		),
+		genre_ids: film.genre_ids.map((genreId) => {
+			const currentGenre = listGenres.find((genre) => genre.id === genreId);
+			return currentGenre ? currentGenre.name : '';
+		}),
 	}));
 }
 

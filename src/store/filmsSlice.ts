@@ -1,6 +1,7 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { translate } from '../constants';
 import getGenresFilms from '../helpers/getGenresFilms';
+import { Movie, Genre } from '../types';
 
 export const fetchFilms = createAsyncThunk(
 	'todos/fetchTodos',
@@ -26,9 +27,10 @@ export const fetchFilms = createAsyncThunk(
 			const data = await response.json();
 			console.log(data);
 
-			const dataWithGenres = getGenresFilms(listGenres, data.results);
-
-			return dataWithGenres;
+			return {
+				totalPages: data.total_pages,
+				results: getGenresFilms(listGenres, data.results),
+			};
 		} catch (error) {
 			return rejectWithValue(error.message);
 		}
@@ -56,24 +58,21 @@ export const fetchGenres = createAsyncThunk(
 	}
 );
 
-//TODO
 export interface FilmsState {
 	categoryValue: string;
-	pages: number;
 	currentPage: number;
-	listfilms: any;
-	status: any;
-	error: any;
-	listGenres: any;
+	totalPages: number;
+	listfilms: Movie[];
+	status: null | string;
+	listGenres: Genre[];
 }
 
 const initialState: FilmsState = {
 	categoryValue: translate.en.categories[0].value,
-	pages: 6,
 	currentPage: 1,
+	totalPages: 0,
 	listfilms: [],
 	status: null,
-	error: null,
 	listGenres: [],
 };
 
@@ -81,29 +80,37 @@ const filmsReducer = createSlice({
 	name: 'films',
 	initialState,
 	reducers: {
-		changeCategory(state, action) {
+		changeCategory(state, action: PayloadAction<string>) {
 			state.categoryValue = action.payload;
 		},
-		setCurrentPage(state, action) {
+		setCurrentPage(state, action: PayloadAction<number>) {
 			state.currentPage = action.payload;
 		},
 	},
 	extraReducers: (builder) => {
-		builder.addCase(fetchFilms.pending, (state, { payload }) => {
+		builder.addCase(fetchFilms.pending, (state) => {
 			state.status = 'loading';
-			state.error = null;
 		});
-		builder.addCase(fetchFilms.fulfilled, (state, { payload }) => {
-			state.listfilms = payload;
-		});
-		builder.addCase(fetchFilms.rejected, (state, { payload }) => {
+		builder.addCase(
+			fetchFilms.fulfilled,
+			(
+				state,
+				{ payload }: PayloadAction<{ totalPages: number; results: Movie[] }>
+			) => {
+				state.listfilms = payload.results;
+				state.totalPages = payload.totalPages;
+			}
+		);
+		builder.addCase(fetchFilms.rejected, (state) => {
 			state.status = 'failed';
-			state.error = payload;
 		});
 
-		builder.addCase(fetchGenres.fulfilled, (state, { payload }) => {
-			state.listGenres = payload.genres;
-		});
+		builder.addCase(
+			fetchGenres.fulfilled,
+			(state, { payload }: PayloadAction<{ genres: Genre[] }>) => {
+				state.listGenres = payload.genres;
+			}
+		);
 	},
 });
 

@@ -1,28 +1,27 @@
 import React from 'react';
 import styles from './Pagination.module.scss';
 import classnames from 'classnames';
+import getCountPages from '../../helpers/getCountPages';
 
 interface PaginationProps {
-	pages: number;
+	totalPages: number;
 	currentPage: number;
-	//TODO
-	setCurrentPage: any;
+	setCurrentPage: (value: number) => void;
 }
 
 function Pagination(props: PaginationProps) {
-	const countPages = new Array(props.pages).fill(null);
-
+	const pages = getCountPages(props.totalPages, props.currentPage);
 	return (
 		<ul className={styles.pagination}>
-			{countPages.map((page, index) => (
+			{pages.map((page) => (
 				<li
-					onClick={() => props.setCurrentPage(index + 1)}
-					key={index}
+					key={page}
 					className={classnames(styles.item, {
-						[styles.active]: props.currentPage === index + 1,
+						[styles.active]: props.currentPage === page,
 					})}
+					onClick={() => props.setCurrentPage(page)}
 				>
-					{index + 1}
+					{page}
 				</li>
 			))}
 		</ul>
