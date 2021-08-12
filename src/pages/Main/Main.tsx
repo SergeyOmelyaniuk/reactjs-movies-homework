@@ -14,6 +14,7 @@ import {
 	setCurrentPage,
 	fetchFilms,
 } from '../../store/filmsSlice';
+import MovieList from '../../сomponents/MovieList';
 
 function Main() {
 	const categoryValue = useSelector(
@@ -24,35 +25,45 @@ function Main() {
 		(state: RootState) => state.films.currentPage
 	);
 	const listFilms = useSelector((state: RootState) => state.films.listfilms);
+	const searchValue = useSelector(
+		(state: RootState) => state.films.searchValue
+	);
 
 	const dispatch = useDispatch();
 
-	const hundlerChangeCategory = (value: string) => {
+	const handlerChangeCategory = (value: string) => {
 		dispatch(changeCategory(value));
 	};
-	const hundlerSetCurrentPage = (value: number) => {
+	const handlerSetCurrentPage = (value: number) => {
 		dispatch(setCurrentPage(value));
 	};
 
 	useEffect(() => {
 		dispatch(fetchFilms());
 		window.scrollTo(0, 0);
-	}, [dispatch, currentPage, categoryValue]);
+	}, [dispatch, currentPage, categoryValue, searchValue]);
 
 	return (
 		<div className={styles.main}>
-			<div className={styles.wrapCategoriesSort}>
-				<CategoriesSort
-					categories={translate.en.categories}
-					categoryValue={categoryValue}
-					changeCategory={hundlerChangeCategory}
-				/>
-			</div>
-			<WrapMovies movies={listFilms} />
+			{searchValue ? (
+				<MovieList movies={listFilms} />
+			) : (
+				<>
+					<div className={styles.wrapCategoriesSort}>
+						<CategoriesSort
+							categories={translate.en.categories}
+							categoryValue={categoryValue}
+							changeCategory={handlerChangeCategory}
+						/>
+					</div>
+					<WrapMovies movies={listFilms} />
+				</>
+			)}
+
 			<div className={styles.wrapPagination}>
 				<Pagination
 					totalPages={totalPages}
-					setCurrentPage={hundlerSetCurrentPage}
+					setCurrentPage={handlerSetCurrentPage}
 					currentPage={currentPage}
 				/>
 			</div>

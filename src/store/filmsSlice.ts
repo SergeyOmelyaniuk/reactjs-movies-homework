@@ -4,7 +4,7 @@ import getGenresFilms from '../helpers/getGenresFilms';
 import { Movie, Genre } from '../types';
 
 export const fetchFilms = createAsyncThunk(
-	'todos/fetchTodos',
+	'todos/fetchFilms',
 	async function (_, { rejectWithValue, getState, dispatch }) {
 		const { films } = getState() as any;
 
@@ -13,12 +13,13 @@ export const fetchFilms = createAsyncThunk(
 		}
 
 		const state = getState() as any;
-		const { currentPage, categoryValue, listGenres } = state.films;
+		const { currentPage, categoryValue, listGenres, searchValue } = state.films;
+		const url = searchValue
+			? `${process.env.REACT_APP_API_URL}/search/movie?query=${searchValue}&api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${currentPage}`
+			: `${process.env.REACT_APP_API_URL}/movie/${categoryValue}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${currentPage}`;
 
 		try {
-			const response = await fetch(
-				`https://api.themoviedb.org/3/movie/${categoryValue}?api_key=75375a34318f83bb07dacbf870f89dd3&language=en-US&page=${currentPage}`
-			);
+			const response = await fetch(url);
 
 			if (!response.ok) {
 				throw new Error('Server Error!');
@@ -42,7 +43,7 @@ export const fetchGenres = createAsyncThunk(
 	async function (_, { rejectWithValue }) {
 		try {
 			const response = await fetch(
-				`https://api.themoviedb.org/3/genre/movie/list?api_key=75375a34318f83bb07dacbf870f89dd3&language=en-US`
+				`${process.env.REACT_APP_API_URL}/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
 			);
 
 			if (!response.ok) {
@@ -65,6 +66,7 @@ export interface FilmsState {
 	listfilms: Movie[];
 	status: null | string;
 	listGenres: Genre[];
+	searchValue: string;
 }
 
 const initialState: FilmsState = {
@@ -74,6 +76,7 @@ const initialState: FilmsState = {
 	listfilms: [],
 	status: null,
 	listGenres: [],
+	searchValue: '',
 };
 
 const filmsReducer = createSlice({
@@ -82,9 +85,14 @@ const filmsReducer = createSlice({
 	reducers: {
 		changeCategory(state, action: PayloadAction<string>) {
 			state.categoryValue = action.payload;
+			state.currentPage = 1;
 		},
 		setCurrentPage(state, action: PayloadAction<number>) {
 			state.currentPage = action.payload;
+		},
+		setSearcValue(state, action: PayloadAction<string>) {
+			state.searchValue = action.payload;
+			state.currentPage = 1;
 		},
 	},
 	extraReducers: (builder) => {
@@ -105,15 +113,22 @@ const filmsReducer = createSlice({
 			state.status = 'failed';
 		});
 
+		builder.addCase(fetchGenres.pending, (state) => {
+			state.status = 'loading';
+		});
 		builder.addCase(
 			fetchGenres.fulfilled,
 			(state, { payload }: PayloadAction<{ genres: Genre[] }>) => {
 				state.listGenres = payload.genres;
 			}
 		);
+		builder.addCase(fetchGenres.rejected, (state) => {
+			state.status = 'failed';
+		});
 	},
 });
 
-export const { changeCategory, setCurrentPage } = filmsReducer.actions;
+export const { changeCategory, setCurrentPage, setSearcValue } =
+	filmsReducer.actions;
 
 export default filmsReducer.reducer;

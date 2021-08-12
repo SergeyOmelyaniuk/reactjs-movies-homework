@@ -1,3 +1,7 @@
+.search {
+	position: relative;
+}
+
 .input {
 	width: 730px;
 	height: 50px;
@@ -6,4 +10,16 @@
 	background: rgb(255, 255, 255);
 	border-radius: 5px 5px 5px 5px;
 	font-size: 16px;
+}
+
+.button {
+	background-image: url(../../../assets/images/icon-search.png);
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: #fff;
+	position: absolute;
+	right: 3px;
+	width: 50px;
+	height: 50px;
 }
