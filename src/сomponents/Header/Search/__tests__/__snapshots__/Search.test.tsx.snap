@@ -7,9 +7,13 @@ exports[`Search should render 1`] = `
   >
     <input
       class="input"
-      id=""
       placeholder="Movies, person, movie theaters"
-      type="search"
+      type="text"
+      value=""
+    />
+    <button
+      class="button"
+      type="submit"
     />
   </form>
 </div>

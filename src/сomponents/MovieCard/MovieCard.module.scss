@@ -1,12 +1,13 @@
+@import '../../scss/variables.scss';
+
 .movieCard {
 	width: 253px;
-	height: 430px;
 	cursor: pointer;
 	&:hover .preview {
 		display: block;
 	}
 	&:hover .title {
-		color: #fff;
+		color: $colorWhite;
 	}
 	&:hover .overlay {
 		position: absolute;
@@ -18,7 +19,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: rgba(66, 66, 66, 0.4);
+	background: $colorOverlay;
 	border-radius: 5px;
 }
 
@@ -43,8 +44,8 @@
 	position: absolute;
 	left: -8px;
 	top: 6px;
-	background-color: #3cb43a;
-	color: #fff;
+	background-color: $colorGreen;
+	color: $colorWhite;
 	width: 42px;
 	height: 24px;
 	border-radius: 3px;
@@ -58,25 +59,29 @@
 	transform: translate(-50%, -50%);
 	width: 62px;
 	height: 62px;
-	background: #6fb247 url('../../assets/images/icon-play.png') no-repeat center;
+	background: $colorPreview url('../../assets/images/icon-play.png') no-repeat
+		center;
 	border-radius: 50%;
 	display: none;
 }
 
 .content {
-	color: #d9d9d9;
+	color: $colorGrey;
 }
 
 .title {
 	font-size: 20px;
 	margin-top: 15px;
-	margin-bottom: 12px;
+	margin-bottom: 9px;
 	line-height: 25px;
 }
 
 .genre {
+	line-height: 1.5;
 	& span {
 		margin-right: 10px;
 		font-size: 14px;
+		display: inline-block;
+		color: $colorGreyDark;
 	}
 }

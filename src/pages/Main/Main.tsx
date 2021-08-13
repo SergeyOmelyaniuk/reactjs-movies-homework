@@ -1,28 +1,66 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import CategoriesSort from '../../сomponents/CategoriesSort';
 import Pagination from '../../сomponents/Pagination';
 import WrapMovies from '../../сomponents/WrapMovies';
 import styles from './Main.module.scss';
-import { movies } from '../../mocks/movies';
-import { categories } from '../../mocks/constants';
+import { translate } from '../../constants';
 
-function Main() {
-	const [categoryValue, setCategoryValue] = useState(categories[0].value);
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
+
+import {
+	changeCategory,
+	setCurrentPage,
+	fetchFilms,
+} from '../../store/filmsSlice';
+import MovieList from '../../сomponents/MovieList';
+
+const Main = () => {
+	const categoryValue = useAppSelector((state) => state.films.categoryValue);
+	const totalPages = useAppSelector((state) => state.films.totalPages);
+	const currentPage = useAppSelector((state) => state.films.currentPage);
+	const listFilms = useAppSelector((state) => state.films.listfilms);
+	const searchValue = useAppSelector((state) => state.films.searchValue);
+
+	const dispatch = useAppDispatch();
+
+	const handlerChangeCategory = (value: string) => {
+		dispatch(changeCategory(value));
+	};
+	const handlerSetCurrentPage = (value: number) => {
+		dispatch(setCurrentPage(value));
+	};
+
+	useEffect(() => {
+		dispatch(fetchFilms());
+		window.scrollTo(0, 0);
+	}, [dispatch, currentPage, categoryValue, searchValue]);
+
 	return (
 		<div className={styles.main}>
-			<div className={styles.wrapCategoriesSort}>
-				<CategoriesSort
-					categories={categories}
-					categoryValue={categoryValue}
-					changeCategory={setCategoryValue}
-				/>
-			</div>
-			<WrapMovies movies={movies[categoryValue]} />
+			{searchValue ? (
+				<MovieList movies={listFilms} />
+			) : (
+				<>
+					<div className={styles.wrapCategoriesSort}>
+						<CategoriesSort
+							categories={translate.en.categories}
+							categoryValue={categoryValue}
+							changeCategory={handlerChangeCategory}
+						/>
+					</div>
+					<WrapMovies movies={listFilms} />
+				</>
+			)}
+
 			<div className={styles.wrapPagination}>
-				<Pagination pages={5} />
+				<Pagination
+					totalPages={totalPages}
+					setCurrentPage={handlerSetCurrentPage}
+					currentPage={currentPage}
+				/>
 			</div>
 		</div>
 	);
-}
+};
 
 export default Main;

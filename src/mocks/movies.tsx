@@ -3,6 +3,8 @@ import { Movies } from '../types';
 export const movies: Movies = {
 	popular: [
 		{
+			poster_path: 'film_1.jpg',
+			genre_ids: ['Genre 1', 'Genre 2'],
 			id: 1,
 			title: 'Красотка на взводе',
 			release_date: '2021-05-26',
@@ -82,6 +84,8 @@ export const movies: Movies = {
 			],
 		},
 		{
+			poster_path: 'film_2.jpg',
+			genre_ids: ['Genre 1', 'Genre 2'],
 			id: 2,
 			title: 'Сокровище Счастливчика',
 			release_date: '2021-05-26',
@@ -97,6 +101,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 3,
+			poster_path: 'film_3.jpg',
+			genre_ids: ['Genre 1'],
 			title: 'Сталинград',
 			release_date: '2021-05-26',
 			genre: ['Боевик', 'Комедия'],
@@ -111,6 +117,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 4,
+			poster_path: 'film42.jpg',
+			genre_ids: ['Genre 4'],
 			title: 'Люди в черном: Интернэшнл',
 			release_date: '2021-05-26',
 			genre: ['Боевик', 'Комедия'],
@@ -125,6 +133,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 5,
+			poster_path: 'film_5.jpg',
+			genre_ids: ['Genre 1'],
 			title: 'Значит, война',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -139,6 +149,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 6,
+			poster_path: 'film_6.jpg',
+			genre_ids: ['Genre 1'],
 			title: 'Приключения желтого чемоданчика',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -152,6 +164,8 @@ export const movies: Movies = {
 			actors: [],
 		},
 		{
+			poster_path: 'film_7.jpg',
+			genre_ids: ['Genre 1'],
 			id: 7,
 			title: 'Поезд в Пусан',
 			release_date: '2021-05-26',
@@ -167,6 +181,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 8,
+			poster_path: 'film_8.jpg',
+			genre_ids: ['Genre 3'],
 			title: 'Никто не выжил',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -181,6 +197,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 9,
+			poster_path: 'film_9.jpg',
+			genre_ids: ['Genre 1'],
 			title: 'Ведьма',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -195,6 +213,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 10,
+			poster_path: 'film_10.jpg',
+			genre_ids: ['Genre 1'],
 			title: 'Звёздные войны: Пробуждение силы',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -209,6 +229,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 11,
+			poster_path: 'film_11.jpg',
+			genre_ids: ['Genre 1'],
 			title: 'Марсианин',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -223,6 +245,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 12,
+			poster_path: 'film_12jpg',
+			genre_ids: ['Genre 3'],
 			title: 'Республика Z',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -237,6 +261,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 13,
+			poster_path: 'film_13.jpg',
+			genre_ids: ['Genre 1'],
 			title: 'Планета 51',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -251,6 +277,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 14,
+			poster_path: 'film_14.jpg',
+			genre_ids: ['Genre 1'],
 			title: 'Красные туфельки и семь гномов',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -265,6 +293,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 15,
+			poster_path: 'film_15.jpg',
+			genre_ids: ['Genre 1'],
 			title: 'Капитошка',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -279,6 +309,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 16,
+			poster_path: 'film_16.jpg',
+			genre_ids: ['Genre 1'],
 			title: 'Война будущего',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -293,6 +325,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 17,
+			poster_path: 'film_17.jpg',
+			genre_ids: ['Genre 5'],
 			title: 'Чернобыль',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -307,6 +341,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 18,
+			poster_path: 'film_18.jpg',
+			genre_ids: ['Genre 3'],
 			title: 'Странный дом',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -321,6 +357,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 19,
+			poster_path: 'film_19.jpg',
+			genre_ids: ['Genre 1'],
 			title: 'Дальний космос',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -335,6 +373,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 20,
+			poster_path: 'film_20.jpg',
+			genre_ids: ['Genre 1'],
 			title: 'Мандалорец',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -351,6 +391,8 @@ export const movies: Movies = {
 	top_rated: [
 		{
 			id: 21,
+			poster_path: 'film_21.jpg',
+			genre_ids: ['Genre 1'],
 			title: 'Интерстеллар',
 			release_date: '2021-05-26',
 			genre: ['Драма'],
@@ -365,6 +407,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 22,
+			poster_path: 'film_22.jpg',
+			genre_ids: ['Genre 2'],
 			title: 'Безумный Макс: Дорога ярости',
 			release_date: '2021-05-26',
 			genre: ['Драма'],
@@ -379,6 +423,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 23,
+			poster_path: 'film_23.jpg',
+			genre_ids: ['Genre 2'],
 			title: 'Гонка',
 			release_date: '2021-05-26',
 			genre: ['Драма'],
@@ -393,6 +439,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 24,
+			poster_path: 'film_24.jpg',
+			genre_ids: ['Genre 2'],
 			title: 'Джокер',
 			release_date: '2021-05-26',
 			genre: ['Драма'],
@@ -407,6 +455,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 25,
+			poster_path: 'film_25.jpg',
+			genre_ids: ['Genre 2'],
 			title: 'Отступники',
 			release_date: '2021-05-26',
 			genre: ['Драма'],
@@ -421,6 +471,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 26,
+			poster_path: 'film_26.jpg',
+			genre_ids: ['Genre 2'],
 			title: 'Мстители: Финал',
 			release_date: '2021-05-26',
 			genre: ['Драма'],
@@ -435,6 +487,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 27,
+			poster_path: 'film_27.jpg',
+			genre_ids: ['Genre 2'],
 			title: '1917',
 			release_date: '2021-05-26',
 			genre: ['Драма'],
@@ -449,6 +503,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 28,
+			poster_path: 'film_28.jpg',
+			genre_ids: ['Genre 2'],
 			title: 'Тьма',
 			release_date: '2021-05-26',
 			genre: ['Драма'],
@@ -463,6 +519,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 29,
+			poster_path: 'film_29.jpg',
+			genre_ids: ['Genre 2'],
 			title: 'Остров проклятых',
 			release_date: '2021-05-26',
 			genre: ['Драма'],
@@ -477,6 +535,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 30,
+			poster_path: 'film_30.jpg',
+			genre_ids: ['Genre 3'],
 			title: 'Дикие истории',
 			release_date: '2021-05-26',
 			genre: ['Драма'],
@@ -493,6 +553,8 @@ export const movies: Movies = {
 	upcoming: [
 		{
 			id: 31,
+			poster_path: 'film_31.jpg',
+			genre_ids: ['Genre 3'],
 			title: 'Бегущий по лезвию 2049',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -507,6 +569,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 32,
+			poster_path: 'film_32.jpg',
+			genre_ids: ['Genre 3'],
 			title: 'Клаустрофобы 2: Лига выживших',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -521,6 +585,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 33,
+			poster_path: 'film_33.jpg',
+			genre_ids: ['Genre 3'],
 			title: 'В петле времени',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -535,6 +601,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 34,
+			poster_path: 'film_34.jpg',
+			genre_ids: ['Genre 3'],
 			title: 'Дальний космос',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],
@@ -549,6 +617,8 @@ export const movies: Movies = {
 		},
 		{
 			id: 35,
+			poster_path: 'film_35.jpg',
+			genre_ids: ['Genre 3'],
 			title: 'Как приручить дракона 3',
 			release_date: '2021-05-26',
 			genre: ['Боевик'],

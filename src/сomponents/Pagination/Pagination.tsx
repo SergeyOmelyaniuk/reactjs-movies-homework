@@ -1,30 +1,36 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Pagination.module.scss';
 import classnames from 'classnames';
+import getPages from '../../helpers/getPages';
 
 interface PaginationProps {
-	pages: number;
+	totalPages: number;
+	currentPage: number;
+	setCurrentPage: (value: number) => void;
 }
 
-function Pagination(props: PaginationProps) {
-	const [currentPage, setCurrentPage] = useState(1);
-	const countPages = new Array(props.pages).fill(null);
+const Pagination = ({
+	totalPages,
+	currentPage,
+	setCurrentPage,
+}: PaginationProps) => {
+	const pages = getPages(totalPages, currentPage);
 
 	return (
 		<ul className={styles.pagination}>
-			{countPages.map((page, index) => (
+			{pages.map((page) => (
 				<li
-					onClick={() => setCurrentPage(index + 1)}
-					key={index}
+					key={page}
 					className={classnames(styles.item, {
-						[styles.active]: currentPage === index + 1,
+						[styles.active]: currentPage === page,
 					})}
+					onClick={() => setCurrentPage(page)}
 				>
-					{index + 1}
+					{page}
 				</li>
 			))}
 		</ul>
 	);
-}
+};
 
 export default Pagination;

@@ -27,10 +27,11 @@ exports[`ActorDescription should render 1`] = `
         <span
           class="title"
         >
-          Birthday:
+          Birthday
+          :
         </span>
         <p
-          class="date"
+          class="text"
         >
           1959-04-15
         </p>
@@ -41,10 +42,11 @@ exports[`ActorDescription should render 1`] = `
         <span
           class="title"
         >
-          Place of birth: 
+          Place of birth
+          :
         </span>
         <p
-          class="placeBirthActor"
+          class="text"
         >
           Brest, Belarus
         </p>
@@ -55,7 +57,8 @@ exports[`ActorDescription should render 1`] = `
         <span
           class="title"
         >
-          Biography:
+          Biography
+          :
         </span>
         <p
           class="text"

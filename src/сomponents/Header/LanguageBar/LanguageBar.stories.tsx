@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+
 import LanguageBar from './LanguageBar';
 import { languages } from '../../../mocks/constants';
 
@@ -27,4 +29,6 @@ const Template: ComponentStory<typeof LanguageBar> = (args) => (
 export const Default = Template.bind({});
 Default.args = {
 	languages: languages,
+	currentlanguage: languages[0],
+	setCurrentlanguage: action('Change language'),
 };

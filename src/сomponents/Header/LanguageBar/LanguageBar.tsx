@@ -4,11 +4,17 @@ import styles from './LanguageBar.module.scss';
 
 interface LanguageBarProps {
 	languages: Language[];
+	currentlanguage: Language;
+	setCurrentlanguage: (value: Language) => void;
 }
 
-function LanguageBar(props: LanguageBarProps) {
-	const [currentlanguage, setCurrentlanguage] = useState(props.languages[0]);
+const LanguageBar = ({
+	languages,
+	currentlanguage,
+	setCurrentlanguage,
+}: LanguageBarProps) => {
 	const [isPopupVisible, togglePopup] = useState(false);
+
 	const handler = (lang: Language) => {
 		if (currentlanguage.title !== lang.title) {
 			setCurrentlanguage(lang);
@@ -23,7 +29,7 @@ function LanguageBar(props: LanguageBarProps) {
 			</div>
 			{isPopupVisible && (
 				<ul className={styles.popup} role='menubar'>
-					{props.languages.map((lang) => (
+					{languages.map((lang) => (
 						<li
 							onClick={() => handler(lang)}
 							key={lang.title}
@@ -37,6 +43,6 @@ function LanguageBar(props: LanguageBarProps) {
 			)}
 		</div>
 	);
-}
+};
 
 export default LanguageBar;

@@ -1,5 +1,7 @@
+@import '../../scss/variables.scss';
+
 .header {
-	background-color: #202020;
+	background-color: $colorBackgroundHeader;
 }
 
 .container {
@@ -9,6 +11,9 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	& a {
+		color: white;
+	}
 }
 
 .title {

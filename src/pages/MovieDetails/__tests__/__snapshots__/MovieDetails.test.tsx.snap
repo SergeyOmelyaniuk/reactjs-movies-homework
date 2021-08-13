@@ -35,7 +35,8 @@ exports[`MovieDetails should render 1`] = `
           <span
             class="title"
           >
-            Overview:
+            Overview
+            :
           </span>
           <p
             class="text"
@@ -49,10 +50,11 @@ exports[`MovieDetails should render 1`] = `
           <span
             class="title"
           >
-            Release date:
+            Release date
+            :
           </span>
           <p
-            class="number"
+            class="text"
           >
             2021-05-26
           </p>
@@ -63,10 +65,11 @@ exports[`MovieDetails should render 1`] = `
           <span
             class="title"
           >
-            Revenue:
+            Revenue
+            :
           </span>
           <p
-            class="number"
+            class="text"
           >
             $120000
           </p>
@@ -77,10 +80,11 @@ exports[`MovieDetails should render 1`] = `
           <span
             class="title"
           >
-            Duration:
+            Duration
+            :
           </span>
           <p
-            class="number"
+            class="text"
           >
             2:14
           </p>
@@ -386,6 +390,7 @@ exports[`MovieDetails should render 1`] = `
               <img
                 alt=""
                 class="image"
+                src="https://image.tmdb.org/t/p/w500/film_1.jpg"
               />
               <span
                 class="rating"
@@ -402,13 +407,16 @@ exports[`MovieDetails should render 1`] = `
               <h2
                 class="title"
               >
-                Бегущий по лезвию 2049
+                Красотка на взводе
               </h2>
               <p
                 class="genre"
               >
                 <span>
-                  Боевик
+                  Genre 1
+                </span>
+                <span>
+                  Genre 2
                 </span>
               </p>
             </div>
@@ -429,11 +437,12 @@ exports[`MovieDetails should render 1`] = `
               <img
                 alt=""
                 class="image"
+                src="https://image.tmdb.org/t/p/w500/film_2.jpg"
               />
               <span
                 class="rating"
               >
-                97
+                72
               </span>
               <div
                 class="preview"
@@ -445,13 +454,16 @@ exports[`MovieDetails should render 1`] = `
               <h2
                 class="title"
               >
-                Клаустрофобы 2: Лига выживших
+                Сокровище Счастливчика
               </h2>
               <p
                 class="genre"
               >
                 <span>
-                  Боевик
+                  Genre 1
+                </span>
+                <span>
+                  Genre 2
                 </span>
               </p>
             </div>
@@ -472,11 +484,12 @@ exports[`MovieDetails should render 1`] = `
               <img
                 alt=""
                 class="image"
+                src="https://image.tmdb.org/t/p/w500/film_3.jpg"
               />
               <span
                 class="rating"
               >
-                89
+                76
               </span>
               <div
                 class="preview"
@@ -488,13 +501,13 @@ exports[`MovieDetails should render 1`] = `
               <h2
                 class="title"
               >
-                В петле времени
+                Сталинград
               </h2>
               <p
                 class="genre"
               >
                 <span>
-                  Боевик
+                  Genre 1
                 </span>
               </p>
             </div>
@@ -515,11 +528,672 @@ exports[`MovieDetails should render 1`] = `
               <img
                 alt=""
                 class="image"
+                src="https://image.tmdb.org/t/p/w500/film42.jpg"
               />
               <span
                 class="rating"
               >
-                89
+                69
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Люди в черном: Интернэшнл
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 4
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_5.jpg"
+              />
+              <span
+                class="rating"
+              >
+                96
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Значит, война
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 1
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_6.jpg"
+              />
+              <span
+                class="rating"
+              >
+                77
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Приключения желтого чемоданчика
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 1
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_7.jpg"
+              />
+              <span
+                class="rating"
+              >
+                79
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Поезд в Пусан
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 1
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_8.jpg"
+              />
+              <span
+                class="rating"
+              >
+                79
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Никто не выжил
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 3
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_9.jpg"
+              />
+              <span
+                class="rating"
+              >
+                53
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Ведьма
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 1
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_10.jpg"
+              />
+              <span
+                class="rating"
+              >
+                53
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Звёздные войны: Пробуждение силы
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 1
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_11.jpg"
+              />
+              <span
+                class="rating"
+              >
+                58
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Марсианин
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 1
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_12jpg"
+              />
+              <span
+                class="rating"
+              >
+                100
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Республика Z
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 3
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_13.jpg"
+              />
+              <span
+                class="rating"
+              >
+                90
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Планета 51
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 1
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_14.jpg"
+              />
+              <span
+                class="rating"
+              >
+                86
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Красные туфельки и семь гномов
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 1
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_15.jpg"
+              />
+              <span
+                class="rating"
+              >
+                92
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Капитошка
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 1
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_16.jpg"
+              />
+              <span
+                class="rating"
+              >
+                58
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Война будущего
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 1
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_17.jpg"
+              />
+              <span
+                class="rating"
+              >
+                86
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Чернобыль
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 5
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_18.jpg"
+              />
+              <span
+                class="rating"
+              >
+                81
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Странный дом
+              </h2>
+              <p
+                class="genre"
+              >
+                <span>
+                  Genre 3
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wrapMovie"
+        >
+          <div
+            class="movieCard"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt=""
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_19.jpg"
+              />
+              <span
+                class="rating"
+              >
+                79
               </span>
               <div
                 class="preview"
@@ -537,7 +1211,7 @@ exports[`MovieDetails should render 1`] = `
                 class="genre"
               >
                 <span>
-                  Боевик
+                  Genre 1
                 </span>
               </p>
             </div>
@@ -558,11 +1232,12 @@ exports[`MovieDetails should render 1`] = `
               <img
                 alt=""
                 class="image"
+                src="https://image.tmdb.org/t/p/w500/film_20.jpg"
               />
               <span
                 class="rating"
               >
-                55
+                20
               </span>
               <div
                 class="preview"
@@ -574,13 +1249,13 @@ exports[`MovieDetails should render 1`] = `
               <h2
                 class="title"
               >
-                Как приручить дракона 3
+                Мандалорец
               </h2>
               <p
                 class="genre"
               >
                 <span>
-                  Боевик
+                  Genre 1
                 </span>
               </p>
             </div>

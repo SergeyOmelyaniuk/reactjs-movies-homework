@@ -14,6 +14,7 @@ exports[`MovieCard should render 1`] = `
       <img
         alt=""
         class="image"
+        src="https://image.tmdb.org/t/p/w500/film_1.jpg"
       />
       <span
         class="rating"
@@ -36,10 +37,10 @@ exports[`MovieCard should render 1`] = `
         class="genre"
       >
         <span>
-          Боевик
+          Genre 1
         </span>
         <span>
-          Комедия
+          Genre 2
         </span>
       </p>
     </div>

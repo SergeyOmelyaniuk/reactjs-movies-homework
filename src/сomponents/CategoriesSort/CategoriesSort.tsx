@@ -8,14 +8,18 @@ interface CategoriesSortProps {
 	changeCategory: (value: string) => void;
 }
 
-function CategoriesSort(props: CategoriesSortProps) {
+const CategoriesSort = ({
+	categories,
+	categoryValue,
+	changeCategory,
+}: CategoriesSortProps) => {
 	const handler = (event: MouseEvent) => {
-		props.changeCategory((event.target as HTMLInputElement).value);
+		changeCategory((event.target as HTMLInputElement).value);
 	};
 
 	return (
 		<div className={styles.categoriesSort}>
-			{props.categories.map((category) => {
+			{categories.map((category) => {
 				return (
 					<Fragment key={category.id}>
 						<input
@@ -24,7 +28,7 @@ function CategoriesSort(props: CategoriesSortProps) {
 							type='radio'
 							name='sort'
 							value={category.value}
-							defaultChecked={category.value === props.categoryValue}
+							defaultChecked={category.value === categoryValue}
 						/>
 						<label htmlFor={`radio-${category.id}`}>{category.title}</label>
 					</Fragment>
@@ -32,6 +36,6 @@ function CategoriesSort(props: CategoriesSortProps) {
 			})}
 		</div>
 	);
-}
+};
 
 export default CategoriesSort;

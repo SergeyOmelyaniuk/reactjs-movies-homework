@@ -8,19 +8,27 @@ exports[`Header should render 1`] = `
     <div
       class="container"
     >
-      <h1
-        class="title"
+      <a
+        href="/"
       >
-        title
-      </h1>
+        <h1
+          class="title"
+        >
+          title
+        </h1>
+      </a>
       <form
         class="search"
       >
         <input
           class="input"
-          id=""
           placeholder="Movies, person, movie theaters"
-          type="search"
+          type="text"
+          value=""
+        />
+        <button
+          class="button"
+          type="submit"
         />
       </form>
       <div

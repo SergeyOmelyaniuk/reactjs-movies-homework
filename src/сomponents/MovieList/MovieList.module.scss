@@ -1,0 +1,12 @@
+@import '../../scss/variables.scss';
+
+.title {
+	font-size: 25px;
+	margin-bottom: 30px;
+}
+
+.noResults {
+	font-size: 30px;
+	text-transform: uppercase;
+	color: $colorError;
+}

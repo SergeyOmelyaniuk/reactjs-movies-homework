@@ -1,11 +1,9 @@
 export interface Movies {
 	[key: string]: Movie[];
-	// popular: Movie[];
-	// top_rated: Movie[];
-	// upcoming: Movie[];
 }
 
-export interface Movie {
+interface BaseMovie {
+	poster_path: string;
 	id: number;
 	img: string;
 	title: string;
@@ -18,6 +16,14 @@ export interface Movie {
 	duration: string;
 	images: string[];
 	actors: Actor[];
+}
+
+export interface Movie extends BaseMovie {
+	genre_ids: string[];
+}
+
+export interface MovieAPI extends BaseMovie {
+	genre_ids: number[];
 }
 
 export interface Actor {
@@ -39,4 +45,9 @@ export interface Category {
 export interface Language {
 	title: string;
 	value: string;
+}
+
+export interface Genre {
+	id: number;
+	name: string;
 }

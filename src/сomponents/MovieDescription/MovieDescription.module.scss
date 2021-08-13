@@ -1,3 +1,5 @@
+@import '../../scss/variables.scss';
+
 .movieDescription {
 	display: flex;
 }
@@ -22,28 +24,9 @@
 	font-size: 16px;
 }
 
-.title {
-	display: block;
-	margin-bottom: 10px;
-}
-
 .nameMovie {
 	font-size: 46px;
 	margin-bottom: 50px;
-}
-
-.textBlock {
-	margin-bottom: 50px;
-}
-
-.text {
-	line-height: 1.5;
-	font-size: 20px;
-}
-
-.number {
-	text-transform: uppercase;
-	font-size: 20px;
 }
 
 .wrapGenre {
@@ -52,7 +35,7 @@
 }
 
 .genre {
-	background-color: #3cb43a;
+	background-color: $colorGreen;
 	padding: 8px 13px;
 	border-radius: 5px;
 	margin-right: 13px;
