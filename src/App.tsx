@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
-// import ActorProfile from './pages/ActorProfile';
-// import MovieDetails from './pages/MovieDetails';
+import ActorProfile from './pages/ActorProfile';
+import MovieDetails from './pages/MovieDetails';
 import Main from './pages/Main';
 import Header from './сomponents/Header';
 import ErrorBoundary from './сomponents/ErrorBoundary';
@@ -13,8 +13,8 @@ function App() {
 			<div className='container'>
 				<ErrorBoundary>
 					<Main />
-					{/* <MovieDetails /> */}
-					{/* <ActorProfile /> */}
+					<MovieDetails />
+					<ActorProfile />
 				</ErrorBoundary>
 			</div>
 		</div>

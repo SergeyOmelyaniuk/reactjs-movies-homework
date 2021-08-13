@@ -2,12 +2,13 @@ import React from 'react';
 import TopBilledCast from '../TopBilledCast';
 import styles from './MovieDescription.module.scss';
 import { Movie } from '../../types';
+import TextBlock from '../TextBlock';
 
 interface MovieDescriptionProps {
 	movie: Movie;
 }
 
-function MovieDescription(props: MovieDescriptionProps) {
+const MovieDescription = ({ movie }: MovieDescriptionProps) => {
 	return (
 		<div className={styles.movieDescription}>
 			<div className={styles.wrapPhotoMovie}>
@@ -19,37 +20,25 @@ function MovieDescription(props: MovieDescriptionProps) {
 			</div>
 			<div className={styles.infoMovie}>
 				<span className={styles.title}>Title:</span>
-				<h2 className={styles.nameMovie}>{props.movie.title}</h2>
-				<div className={styles.textBlock}>
-					<span className={styles.title}>Overview:</span>
-					<p className={styles.text}>{props.movie.overview}</p>
-				</div>
-				<div className={styles.textBlock}>
-					<span className={styles.title}>Release date:</span>
-					<p className={styles.number}>{props.movie.release_date}</p>
-				</div>
-				<div className={styles.textBlock}>
-					<span className={styles.title}>Revenue:</span>
-					<p className={styles.number}>{`$${props.movie.revenue}`}</p>
-				</div>
-				<div className={styles.textBlock}>
-					<span className={styles.title}>Duration:</span>
-					<p className={styles.number}>{props.movie.duration}</p>
-				</div>
+				<h2 className={styles.nameMovie}>{movie.title}</h2>
+				<TextBlock title='Overview' value={movie.overview} />
+				<TextBlock title='Release date' value={movie.release_date} />
+				<TextBlock title='Revenue' value={`$${movie.revenue}`} />
+				<TextBlock title='Duration' value={movie.duration} />
 				<div className={styles.wrapGenre}>
-					{props.movie.genre.map((item) => (
+					{movie.genre.map((item) => (
 						<div key={item} className={styles.genre}>
 							{item}
 						</div>
 					))}
 				</div>
 				<div className={styles.wrapTopBilledCast}>
-					<TopBilledCast actors={props.movie.actors} />
+					<TopBilledCast actors={movie.actors} />
 				</div>
 				<div className={styles.blockImages}>
 					<span className={styles.titleImages}>Images</span>
 					<div className={styles.wrapImages}>
-						{props.movie.images.map((image) => {
+						{movie.images.map((image) => {
 							return (
 								<div key={image} className={styles.wrapImage}>
 									<img
@@ -68,6 +57,6 @@ function MovieDescription(props: MovieDescriptionProps) {
 			</div>
 		</div>
 	);
-}
+};
 
 export default MovieDescription;

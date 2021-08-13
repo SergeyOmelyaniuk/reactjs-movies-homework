@@ -7,18 +7,16 @@ interface WrapMoviesProps {
 	movies: Movie[];
 }
 
-function WrapMovies(props: WrapMoviesProps) {
-	return (
-		<div className={styles.wrapMovies}>
-			{props.movies.map((movie) => {
-				return (
-					<div key={movie.id} className={styles.wrapMovie}>
-						<MovieCard movie={movie} />
-					</div>
-				);
-			})}
-		</div>
-	);
-}
+const WrapMovies = ({ movies }: WrapMoviesProps) => (
+	<div className={styles.wrapMovies}>
+		{movies.map((movie) => {
+			return (
+				<div key={movie.id} className={styles.wrapMovie}>
+					<MovieCard movie={movie} />
+				</div>
+			);
+		})}
+	</div>
+);
 
 export default WrapMovies;

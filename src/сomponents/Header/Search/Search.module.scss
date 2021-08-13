@@ -1,3 +1,5 @@
+@import '../../../scss/variables.scss';
+
 .search {
 	position: relative;
 }
@@ -5,9 +7,9 @@
 .input {
 	width: 730px;
 	height: 50px;
-	color: rgb(32, 32, 32);
+	color: $colorBlack;
 	padding: 15px;
-	background: rgb(255, 255, 255);
+	background: $colorWhite;
 	border-radius: 5px 5px 5px 5px;
 	font-size: 16px;
 }
@@ -17,7 +19,7 @@
 	background-size: 25px 25px;
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-color: #fff;
+	background-color: $colorWhite;
 	position: absolute;
 	right: 3px;
 	width: 50px;

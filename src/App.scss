@@ -1,7 +1,9 @@
+@import './scss/variables.scss';
+
 .wrapper {
 	color: white;
 	font-family: 'Roboto', sans-serif;
-	background-color: #151515;
+	background-color: $colorBackground;
 	min-height: 100%;
 }
 

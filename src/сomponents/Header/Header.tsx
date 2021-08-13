@@ -4,20 +4,19 @@ import LanguageBar from './LanguageBar';
 import Search from './Search';
 import { languages } from '../../constants';
 
-import { useDispatch, useSelector } from 'react-redux';
 import { setSearcValue } from '../../store/filmsSlice';
 import { setCurrentlanguage } from '../../store/languageSlice';
-import { RootState } from '../../store/store';
+
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
+
 import { Language } from '../../types';
 
-function Header() {
-	const dispatch = useDispatch();
+const Header = () => {
+	const dispatch = useAppDispatch();
 
-	const searchValue = useSelector(
-		(state: RootState) => state.films.searchValue
-	);
-	const currentlanguage = useSelector(
-		(state: RootState) => state.language.languageSelected
+	const searchValue = useAppSelector((state) => state.films.searchValue);
+	const currentlanguage = useAppSelector(
+		(state) => state.language.languageSelected
 	);
 
 	const handlerSetSearcValue = (value: string) => {
@@ -46,6 +45,6 @@ function Header() {
 			</div>
 		</header>
 	);
-}
+};
 
 export default Header;

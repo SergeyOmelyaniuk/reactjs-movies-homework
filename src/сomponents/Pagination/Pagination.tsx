@@ -9,23 +9,28 @@ interface PaginationProps {
 	setCurrentPage: (value: number) => void;
 }
 
-function Pagination(props: PaginationProps) {
-	const pages = getCountPages(props.totalPages, props.currentPage);
+const Pagination = ({
+	totalPages,
+	currentPage,
+	setCurrentPage,
+}: PaginationProps) => {
+	const pages = getCountPages(totalPages, currentPage);
+
 	return (
 		<ul className={styles.pagination}>
 			{pages.map((page) => (
 				<li
 					key={page}
 					className={classnames(styles.item, {
-						[styles.active]: props.currentPage === page,
+						[styles.active]: currentPage === page,
 					})}
-					onClick={() => props.setCurrentPage(page)}
+					onClick={() => setCurrentPage(page)}
 				>
 					{page}
 				</li>
 			))}
 		</ul>
 	);
-}
+};
 
 export default Pagination;

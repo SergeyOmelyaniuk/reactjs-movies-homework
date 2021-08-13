@@ -32,7 +32,8 @@ exports[`MovieDescription should render 1`] = `
         <span
           class="title"
         >
-          Overview:
+          Overview
+          :
         </span>
         <p
           class="text"
@@ -46,10 +47,11 @@ exports[`MovieDescription should render 1`] = `
         <span
           class="title"
         >
-          Release date:
+          Release date
+          :
         </span>
         <p
-          class="number"
+          class="text"
         >
           2021-05-26
         </p>
@@ -60,10 +62,11 @@ exports[`MovieDescription should render 1`] = `
         <span
           class="title"
         >
-          Revenue:
+          Revenue
+          :
         </span>
         <p
-          class="number"
+          class="text"
         >
           $120000
         </p>
@@ -74,10 +77,11 @@ exports[`MovieDescription should render 1`] = `
         <span
           class="title"
         >
-          Duration:
+          Duration
+          :
         </span>
         <p
-          class="number"
+          class="text"
         >
           2:14
         </p>

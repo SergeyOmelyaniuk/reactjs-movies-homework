@@ -35,7 +35,8 @@ exports[`MovieDetails should render 1`] = `
           <span
             class="title"
           >
-            Overview:
+            Overview
+            :
           </span>
           <p
             class="text"
@@ -49,10 +50,11 @@ exports[`MovieDetails should render 1`] = `
           <span
             class="title"
           >
-            Release date:
+            Release date
+            :
           </span>
           <p
-            class="number"
+            class="text"
           >
             2021-05-26
           </p>
@@ -63,10 +65,11 @@ exports[`MovieDetails should render 1`] = `
           <span
             class="title"
           >
-            Revenue:
+            Revenue
+            :
           </span>
           <p
-            class="number"
+            class="text"
           >
             $120000
           </p>
@@ -77,10 +80,11 @@ exports[`MovieDetails should render 1`] = `
           <span
             class="title"
           >
-            Duration:
+            Duration
+            :
           </span>
           <p
-            class="number"
+            class="text"
           >
             2:14
           </p>
@@ -386,6 +390,7 @@ exports[`MovieDetails should render 1`] = `
               <img
                 alt=""
                 class="image"
+                src="https://image.tmdb.org/t/p/w500/film_1.jpg"
               />
               <span
                 class="rating"
@@ -402,187 +407,11 @@ exports[`MovieDetails should render 1`] = `
               <h2
                 class="title"
               >
-                Бегущий по лезвию 2049
+                Красотка на взводе
               </h2>
               <p
                 class="genre"
-              >
-                <span>
-                  Боевик
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="wrapMovie"
-        >
-          <div
-            class="movieCard"
-          >
-            <div
-              class="wrapImage"
-            >
-              <div
-                class="overlay"
               />
-              <img
-                alt=""
-                class="image"
-              />
-              <span
-                class="rating"
-              >
-                97
-              </span>
-              <div
-                class="preview"
-              />
-            </div>
-            <div
-              class="content"
-            >
-              <h2
-                class="title"
-              >
-                Клаустрофобы 2: Лига выживших
-              </h2>
-              <p
-                class="genre"
-              >
-                <span>
-                  Боевик
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="wrapMovie"
-        >
-          <div
-            class="movieCard"
-          >
-            <div
-              class="wrapImage"
-            >
-              <div
-                class="overlay"
-              />
-              <img
-                alt=""
-                class="image"
-              />
-              <span
-                class="rating"
-              >
-                89
-              </span>
-              <div
-                class="preview"
-              />
-            </div>
-            <div
-              class="content"
-            >
-              <h2
-                class="title"
-              >
-                В петле времени
-              </h2>
-              <p
-                class="genre"
-              >
-                <span>
-                  Боевик
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="wrapMovie"
-        >
-          <div
-            class="movieCard"
-          >
-            <div
-              class="wrapImage"
-            >
-              <div
-                class="overlay"
-              />
-              <img
-                alt=""
-                class="image"
-              />
-              <span
-                class="rating"
-              >
-                89
-              </span>
-              <div
-                class="preview"
-              />
-            </div>
-            <div
-              class="content"
-            >
-              <h2
-                class="title"
-              >
-                Дальний космос
-              </h2>
-              <p
-                class="genre"
-              >
-                <span>
-                  Боевик
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="wrapMovie"
-        >
-          <div
-            class="movieCard"
-          >
-            <div
-              class="wrapImage"
-            >
-              <div
-                class="overlay"
-              />
-              <img
-                alt=""
-                class="image"
-              />
-              <span
-                class="rating"
-              >
-                55
-              </span>
-              <div
-                class="preview"
-              />
-            </div>
-            <div
-              class="content"
-            >
-              <h2
-                class="title"
-              >
-                Как приручить дракона 3
-              </h2>
-              <p
-                class="genre"
-              >
-                <span>
-                  Боевик
-                </span>
-              </p>
             </div>
           </div>
         </div>

@@ -8,12 +8,16 @@ interface LanguageBarProps {
 	setCurrentlanguage: (value: Language) => void;
 }
 
-function LanguageBar(props: LanguageBarProps) {
+const LanguageBar = ({
+	languages,
+	currentlanguage,
+	setCurrentlanguage,
+}: LanguageBarProps) => {
 	const [isPopupVisible, togglePopup] = useState(false);
 
 	const handler = (lang: Language) => {
-		if (props.currentlanguage.title !== lang.title) {
-			props.setCurrentlanguage(lang);
+		if (currentlanguage.title !== lang.title) {
+			setCurrentlanguage(lang);
 			togglePopup(false);
 		}
 	};
@@ -21,11 +25,11 @@ function LanguageBar(props: LanguageBarProps) {
 	return (
 		<div className={styles.languageBar}>
 			<div onClick={() => togglePopup(!isPopupVisible)} className={styles.menu}>
-				{props.currentlanguage.title}
+				{currentlanguage.title}
 			</div>
 			{isPopupVisible && (
 				<ul className={styles.popup} role='menubar'>
-					{props.languages.map((lang) => (
+					{languages.map((lang) => (
 						<li
 							onClick={() => handler(lang)}
 							key={lang.title}
@@ -39,6 +43,6 @@ function LanguageBar(props: LanguageBarProps) {
 			)}
 		</div>
 	);
-}
+};
 
 export default LanguageBar;

@@ -6,12 +6,12 @@ interface SearchProps {
 	setSearcValue: (value: string) => void;
 }
 
-function Search(props: SearchProps) {
-	const [searchInput, setSearchInput] = useState(props.searchValue);
+const Search = ({ searchValue, setSearcValue }: SearchProps) => {
+	const [searchInput, setSearchInput] = useState(searchValue);
 
 	const onSubmit = (event: FormEvent) => {
 		event.preventDefault();
-		props.setSearcValue(searchInput);
+		setSearcValue(searchInput);
 	};
 
 	const onChange = (event: FormEvent) => {
@@ -32,6 +32,6 @@ function Search(props: SearchProps) {
 			<button type='submit' className={styles.button}></button>
 		</form>
 	);
-}
+};
 
 export default Search;

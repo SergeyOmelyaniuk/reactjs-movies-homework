@@ -5,10 +5,8 @@ import WrapMovies from '../../сomponents/WrapMovies';
 import styles from './Main.module.scss';
 import { translate } from '../../constants';
 
-import { useSelector } from 'react-redux';
-import { RootState } from '../../store/store';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
 
-import { useDispatch } from 'react-redux';
 import {
 	changeCategory,
 	setCurrentPage,
@@ -16,20 +14,14 @@ import {
 } from '../../store/filmsSlice';
 import MovieList from '../../сomponents/MovieList';
 
-function Main() {
-	const categoryValue = useSelector(
-		(state: RootState) => state.films.categoryValue
-	);
-	const totalPages = useSelector((state: RootState) => state.films.totalPages);
-	const currentPage = useSelector(
-		(state: RootState) => state.films.currentPage
-	);
-	const listFilms = useSelector((state: RootState) => state.films.listfilms);
-	const searchValue = useSelector(
-		(state: RootState) => state.films.searchValue
-	);
+const Main = () => {
+	const categoryValue = useAppSelector((state) => state.films.categoryValue);
+	const totalPages = useAppSelector((state) => state.films.totalPages);
+	const currentPage = useAppSelector((state) => state.films.currentPage);
+	const listFilms = useAppSelector((state) => state.films.listfilms);
+	const searchValue = useAppSelector((state) => state.films.searchValue);
 
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 
 	const handlerChangeCategory = (value: string) => {
 		dispatch(changeCategory(value));
@@ -69,6 +61,6 @@ function Main() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default Main;
