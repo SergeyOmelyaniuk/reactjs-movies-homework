@@ -35,7 +35,14 @@ exports[`MovieCard should render 1`] = `
       </h2>
       <p
         class="genre"
-      />
+      >
+        <span>
+          Genre 1
+        </span>
+        <span>
+          Genre 2
+        </span>
+      </p>
     </div>
   </div>
 </div>

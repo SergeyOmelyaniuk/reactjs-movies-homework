@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import Pagination from './Pagination';
 
 export default {
@@ -28,4 +29,6 @@ const Template: ComponentStory<typeof Pagination> = (args) => (
 export const Default = Template.bind({});
 Default.args = {
 	totalPages: 5,
+	currentPage: 1,
+	setCurrentPage: action('Change page'),
 };

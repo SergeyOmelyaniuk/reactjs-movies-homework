@@ -22,7 +22,6 @@ const Search = ({ searchValue, setSearcValue }: SearchProps) => {
 	return (
 		<form className={styles.search} onSubmit={onSubmit}>
 			<input
-				id=''
 				className={styles.input}
 				type='text'
 				placeholder='Movies, person, movie theaters'

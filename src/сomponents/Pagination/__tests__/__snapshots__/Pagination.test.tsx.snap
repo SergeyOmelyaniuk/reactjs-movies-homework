@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pagination should change page 1`] = `
+exports[`Pagination should render 1`] = `
 <div>
   <ul
     class="pagination"
   >
     <li
-      class="item"
+      class="item active"
     >
       1
     </li>
@@ -21,7 +21,7 @@ exports[`Pagination should change page 1`] = `
       3
     </li>
     <li
-      class="item active"
+      class="item"
     >
       4
     </li>
@@ -31,13 +31,5 @@ exports[`Pagination should change page 1`] = `
       5
     </li>
   </ul>
-</div>
-`;
-
-exports[`Pagination should render 1`] = `
-<div>
-  <ul
-    class="pagination"
-  />
 </div>
 `;

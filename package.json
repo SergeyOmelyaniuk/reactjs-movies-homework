@@ -38,8 +38,11 @@
       "src/**/*.{ts,tsx}",
       "!/node_modules/",
       "!**/*.stories.tsx",
+      "!src/**/index.ts",
       "!src/stories/*",
-      "!src/{index,types}.{ts,tsx}"
+      "!src/{index,types}.{ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/сomponents/ErrorBoundary/*"
     ],
     "coverageThreshold": {
       "global": {

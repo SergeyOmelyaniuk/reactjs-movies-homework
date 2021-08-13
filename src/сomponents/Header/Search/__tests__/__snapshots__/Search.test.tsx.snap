@@ -7,7 +7,6 @@ exports[`Search should render 1`] = `
   >
     <input
       class="input"
-      id=""
       placeholder="Movies, person, movie theaters"
       type="text"
       value=""

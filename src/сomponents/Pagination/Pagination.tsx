@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Pagination.module.scss';
 import classnames from 'classnames';
-import getCountPages from '../../helpers/getCountPages';
+import getPages from '../../helpers/getPages';
 
 interface PaginationProps {
 	totalPages: number;
@@ -14,7 +14,7 @@ const Pagination = ({
 	currentPage,
 	setCurrentPage,
 }: PaginationProps) => {
-	const pages = getCountPages(totalPages, currentPage);
+	const pages = getPages(totalPages, currentPage);
 
 	return (
 		<ul className={styles.pagination}>

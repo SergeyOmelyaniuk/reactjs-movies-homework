@@ -21,12 +21,7 @@ export const fetchFilms = createAsyncThunk(
 		try {
 			const response = await fetch(url);
 
-			if (!response.ok) {
-				throw new Error('Server Error!');
-			}
-
 			const data = await response.json();
-			console.log(data);
 
 			return {
 				totalPages: data.total_pages,
@@ -45,10 +40,6 @@ export const fetchGenres = createAsyncThunk(
 			const response = await fetch(
 				`${process.env.REACT_APP_API_URL}/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
 			);
-
-			if (!response.ok) {
-				throw new Error('Server Error!');
-			}
 
 			const data = await response.json();
 
@@ -69,7 +60,7 @@ export interface FilmsState {
 	searchValue: string;
 }
 
-const initialState: FilmsState = {
+export const initialState: FilmsState = {
 	categoryValue: translate.en.categories[0].value,
 	currentPage: 1,
 	totalPages: 0,

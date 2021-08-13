@@ -17,7 +17,7 @@ const MovieCard = ({ movie }: { movie: Movie }) => (
 		<div className={styles.content}>
 			<h2 className={styles.title}>{movie.title}</h2>
 			<p className={styles.genre}>
-				{movie.genre_ids.map((item: string) => (
+				{movie.genre_ids.map((item) => (
 					<span key={item}>{item}</span>
 				))}
 			</p>

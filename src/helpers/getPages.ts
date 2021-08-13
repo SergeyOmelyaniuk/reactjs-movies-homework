@@ -1,7 +1,7 @@
 const countItemsPerPage = 5;
 const stepForItems = 2;
 
-function getCountPages(pagesCount: number, currentPage: number) {
+function getPages(pagesCount: number, currentPage: number) {
 	const pages = [];
 	if (pagesCount > countItemsPerPage) {
 		if (currentPage > 2) {
@@ -27,4 +27,4 @@ function getCountPages(pagesCount: number, currentPage: number) {
 	return pages;
 }
 
-export default getCountPages;
+export default getPages;

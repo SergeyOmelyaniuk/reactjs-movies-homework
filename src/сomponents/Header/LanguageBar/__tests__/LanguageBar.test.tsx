@@ -5,14 +5,24 @@ import { languages } from '../../../../mocks/constants';
 
 describe('LanguageBar', () => {
 	test('should render', () => {
-		const { container } = render(<LanguageBar languages={languages} />);
+		const { container } = render(
+			<LanguageBar
+				languages={languages}
+				currentlanguage={languages[0]}
+				setCurrentlanguage={() => {}}
+			/>
+		);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	test('should render popup on click event', () => {
 		const { getByText, queryByRole } = render(
-			<LanguageBar languages={languages} />
+			<LanguageBar
+				languages={languages}
+				currentlanguage={languages[0]}
+				setCurrentlanguage={() => {}}
+			/>
 		);
 
 		expect(queryByRole('menubar')).not.toBeInTheDocument();
@@ -25,7 +35,11 @@ describe('LanguageBar', () => {
 
 	test('should not close popup on click on the same value', () => {
 		const { getByText, queryAllByRole, queryByRole } = render(
-			<LanguageBar languages={languages} />
+			<LanguageBar
+				languages={languages}
+				currentlanguage={languages[0]}
+				setCurrentlanguage={() => {}}
+			/>
 		);
 
 		const menuElement = getByText(languages[0].title);
@@ -38,8 +52,13 @@ describe('LanguageBar', () => {
 	});
 
 	test('should close popup on click on new value', () => {
+		const changeLanguageMock = jest.fn();
 		const { getByText, queryAllByRole, queryByRole } = render(
-			<LanguageBar languages={languages} />
+			<LanguageBar
+				languages={languages}
+				currentlanguage={languages[0]}
+				setCurrentlanguage={changeLanguageMock}
+			/>
 		);
 
 		const menuElement = getByText(languages[0].title);
@@ -49,6 +68,7 @@ describe('LanguageBar', () => {
 		fireEvent.click(items[1]);
 
 		expect(queryByRole('menubar')).not.toBeInTheDocument();
-		expect(getByText(languages[1].title)).toBeInTheDocument();
+		expect(changeLanguageMock).toHaveBeenCalledTimes(1);
+		expect(changeLanguageMock).toHaveBeenCalledWith(languages[1]);
 	});
 });
