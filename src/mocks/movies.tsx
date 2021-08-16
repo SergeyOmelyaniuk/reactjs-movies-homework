@@ -28,6 +28,7 @@ export const movies: Movies = {
 			],
 			actors: [
 				{
+					id: 1,
 					name: 'Kate Beckinsale',
 					birthday: '1959-04-15',
 					placeBirth: 'Brest, Belarus',
@@ -37,6 +38,7 @@ export const movies: Movies = {
 					character: 'Lindy',
 				},
 				{
+					id: 2,
 					name: 'Stanley Tucci',
 					birthday: '1959-04-15',
 					placeBirth: 'Brest, Belarus',
@@ -46,6 +48,7 @@ export const movies: Movies = {
 					character: 'Dr. Ivan Munchin',
 				},
 				{
+					id: 3,
 					name: 'Bobby Cannavale',
 					birthday: '1959-04-15',
 					placeBirth: 'Brest, Belarus',
@@ -55,6 +58,7 @@ export const movies: Movies = {
 					character: 'Detective Vicars',
 				},
 				{
+					id: 4,
 					name: 'Jai Courtney',
 					birthday: '1959-04-15',
 					placeBirth: 'Brest, Belarus',
@@ -64,6 +68,7 @@ export const movies: Movies = {
 					character: 'Justin',
 				},
 				{
+					id: 5,
 					name: 'Laverne Cox',
 					birthday: '1959-04-15',
 					placeBirth: 'Brest, Belarus',
@@ -73,6 +78,7 @@ export const movies: Movies = {
 					character: 'Detective Nevin',
 				},
 				{
+					id: 6,
 					name: 'David Bradley',
 					birthday: '1959-04-15',
 					placeBirth: 'Brest, Belarus',

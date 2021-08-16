@@ -1,9 +1,10 @@
 import React from 'react';
 import { Movie } from '../../types';
 import styles from './MovieCard.module.scss';
+import { Link } from 'react-router-dom';
 
 const MovieCard = ({ movie }: { movie: Movie }) => (
-	<div className={styles.movieCard}>
+	<Link className={styles.movieCard} to={`/films/${movie.id}`}>
 		<div className={styles.wrapImage}>
 			<div className={styles.overlay}></div>
 			<img
@@ -22,7 +23,7 @@ const MovieCard = ({ movie }: { movie: Movie }) => (
 				))}
 			</p>
 		</div>
-	</div>
+	</Link>
 );
 
 export default MovieCard;

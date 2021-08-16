@@ -27,6 +27,7 @@ export interface MovieAPI extends BaseMovie {
 }
 
 export interface Actor {
+	id: number;
 	name: string;
 	birthday: string;
 	placeBirth: string;

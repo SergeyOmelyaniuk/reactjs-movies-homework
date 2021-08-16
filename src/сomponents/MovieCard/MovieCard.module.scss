@@ -1,6 +1,7 @@
 @import '../../scss/variables.scss';
 
 .movieCard {
+	display: inline-block;
 	width: 253px;
 	cursor: pointer;
 	&:hover .preview {

@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './ActorCard.module.scss';
 import { Actor } from '../../types';
+import { Link } from 'react-router-dom';
 
 const ActorCard = ({ actor }: { actor: Actor }) => (
-	<div className={styles.actorCard}>
+	<Link className={styles.actorCard} to={`/actors/${actor.id}`}>
 		<div className={styles.wrapImage}>
 			<img
 				className={styles.image}
@@ -15,7 +16,7 @@ const ActorCard = ({ actor }: { actor: Actor }) => (
 			<h2 className={styles.title}>{actor.name}</h2>
 			<p className={styles.character}>{actor.character}</p>
 		</div>
-	</div>
+	</Link>
 );
 
 export default ActorCard;

@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.scss';
-// import ActorProfile from './pages/ActorProfile';
-// import MovieDetails from './pages/MovieDetails';
+import ActorProfile from './pages/ActorProfile';
+import MovieDetails from './pages/MovieDetails';
 import Main from './pages/Main';
 import Header from './сomponents/Header';
 import ErrorBoundary from './сomponents/ErrorBoundary';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
 	return (
@@ -12,9 +13,11 @@ function App() {
 			<Header />
 			<div className='container'>
 				<ErrorBoundary>
-					<Main />
-					{/* <MovieDetails /> */}
-					{/* <ActorProfile /> */}
+					<Switch>
+						<Route exact path='/' component={Main} />
+						<Route path='/films/:filmId' component={MovieDetails} />
+						<Route path='/actors/:actorId' component={ActorProfile} />
+					</Switch>
 				</ErrorBoundary>
 			</div>
 		</div>
