@@ -8,6 +8,7 @@ export const languages: Language[] = [
 export const translate: any = {
 	en: {
 		title: 'title',
+		placeholder: 'Movies, person, movie theaters',
 		categories: [
 			{ id: 1, value: 'popular', title: 'Popular' },
 			{ id: 2, value: 'top_rated', title: 'Top rated' },
@@ -16,6 +17,7 @@ export const translate: any = {
 	},
 	ru: {
 		title: 'заголовок',
+		placeholder: 'Фильмы, люди, кинотеатры',
 		categories: [
 			{ id: 1, value: 'popular', title: 'Популярные' },
 			{ id: 2, value: 'top_rated', title: 'Топ рейтинга' },

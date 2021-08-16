@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Header.module.scss';
 import LanguageBar from './LanguageBar';
 import Search from './Search';
-import { languages } from '../../constants';
+import { languages, translate } from '../../constants';
 
 import { setSearcValue } from '../../store/filmsSlice';
 import { setCurrentlanguage } from '../../store/languageSlice';
@@ -15,7 +15,7 @@ const Header = () => {
 	const dispatch = useAppDispatch();
 
 	const searchValue = useAppSelector((state) => state.films.searchValue);
-	const currentlanguage = useAppSelector(
+	const currentLanguage = useAppSelector(
 		(state) => state.language.languageSelected
 	);
 
@@ -31,15 +31,18 @@ const Header = () => {
 		<header className={styles.header}>
 			<div className={styles.container}>
 				<a href='/'>
-					<h1 className={styles.title}>title</h1>
+					<h1 className={styles.title}>
+						{translate[currentLanguage.title].title}
+					</h1>
 				</a>
 				<Search
 					searchValue={searchValue}
 					setSearcValue={handlerSetSearcValue}
+					placeholder={translate[currentLanguage.title].placeholder}
 				/>
 				<LanguageBar
 					languages={languages}
-					currentlanguage={currentlanguage}
+					currentlanguage={currentLanguage}
 					setCurrentlanguage={handlerSetCurrentlanguage}
 				/>
 			</div>

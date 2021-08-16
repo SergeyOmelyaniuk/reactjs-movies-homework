@@ -4,9 +4,10 @@ import styles from './Search.module.scss';
 interface SearchProps {
 	searchValue: string;
 	setSearcValue: (value: string) => void;
+	placeholder: string;
 }
 
-const Search = ({ searchValue, setSearcValue }: SearchProps) => {
+const Search = ({ searchValue, setSearcValue, placeholder }: SearchProps) => {
 	const [searchInput, setSearchInput] = useState(searchValue);
 
 	const onSubmit = (event: FormEvent) => {
@@ -24,7 +25,7 @@ const Search = ({ searchValue, setSearcValue }: SearchProps) => {
 			<input
 				className={styles.input}
 				type='text'
-				placeholder='Movies, person, movie theaters'
+				placeholder={placeholder}
 				value={searchInput}
 				onChange={onChange}
 			/>
