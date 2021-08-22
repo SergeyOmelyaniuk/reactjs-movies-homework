@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import Main from '..';
 import { Provider } from 'react-redux';
 import { store } from '../../../store/store';
-import { setSearcValue } from '../../../store/filmsSlice';
+import { setSearcValue } from '../../../store/moviesSlice';
 
 describe('Main', () => {
 	test('should render with the list of movies', () => {

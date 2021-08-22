@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import languageReducer from './languageSlice';
-import filmsReducer from './filmsSlice';
+import moviesReducer from './moviesSlice';
+import movieReducer from './movieSlice';
 
 export const store = configureStore({
 	reducer: {
 		language: languageReducer,
-		films: filmsReducer,
+		movies: moviesReducer,
+		movie: movieReducer,
 	},
 });
 

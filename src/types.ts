@@ -35,6 +35,7 @@ export interface Actor {
 	photo: string;
 	photos: string[];
 	character: string;
+	profile_path: string;
 }
 
 export interface Category {
@@ -51,4 +52,19 @@ export interface Language {
 export interface Genre {
 	id: number;
 	name: string;
+}
+
+export interface MovieDetails {
+	poster_path: string;
+	vote_average: number;
+	title: string;
+	overview: string;
+	release_date: string;
+	revenue: number;
+	runtime: number;
+	genres: Genre[];
+}
+
+export interface MovieImages {
+	file_path: string;
 }

@@ -4,7 +4,7 @@ import styles from './MovieCard.module.scss';
 import { Link } from 'react-router-dom';
 
 const MovieCard = ({ movie }: { movie: Movie }) => (
-	<Link className={styles.movieCard} to={`/films/${movie.id}`}>
+	<Link className={styles.movieCard} to={`/movies/${movie.id}`}>
 		<div className={styles.wrapImage}>
 			<div className={styles.overlay}></div>
 			<img
@@ -12,7 +12,7 @@ const MovieCard = ({ movie }: { movie: Movie }) => (
 				src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
 				alt=''
 			/>
-			<span className={styles.rating}>{movie.vote_average}</span>
+			<span className={styles.rating}>{movie.vote_average.toFixed(1)}</span>
 			<div className={styles.preview}></div>
 		</div>
 		<div className={styles.content}>

@@ -2,11 +2,11 @@ import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { translate } from '../constants';
 import { MovieAPI, Genre } from '../types';
 
-export const fetchFilms = createAsyncThunk(
-	'todos/fetchFilms',
+export const fetchMovies = createAsyncThunk(
+	'movies/fetchMovies',
 	async function (_, { rejectWithValue, getState }) {
 		const state = getState() as any;
-		const { currentPage, categoryValue, searchValue } = state.films;
+		const { currentPage, categoryValue, searchValue } = state.movies;
 		const { languageSelected } = state.language;
 		const url = searchValue
 			? `${process.env.REACT_APP_API_URL}/search/movie?query=${searchValue}&api_key=${process.env.REACT_APP_API_KEY}&language=${languageSelected.value}&page=${currentPage}`
@@ -28,7 +28,7 @@ export const fetchFilms = createAsyncThunk(
 );
 
 export const fetchGenres = createAsyncThunk(
-	'todos/fetchGenres',
+	'movies/fetchGenres',
 	async function (_, { rejectWithValue, getState }) {
 		const state = getState() as any;
 		const { languageSelected } = state.language;
@@ -50,7 +50,7 @@ export interface FilmsState {
 	categoryValue: string;
 	currentPage: number;
 	totalPages: number;
-	listfilms: MovieAPI[];
+	listMovies: MovieAPI[];
 	status: null | string;
 	listGenres: Genre[];
 	searchValue: string;
@@ -60,14 +60,14 @@ export const initialState: FilmsState = {
 	categoryValue: translate.en.categories[0].value,
 	currentPage: 1,
 	totalPages: 0,
-	listfilms: [],
+	listMovies: [],
 	status: null,
 	listGenres: [],
 	searchValue: '',
 };
 
 const filmsReducer = createSlice({
-	name: 'films',
+	name: 'movies',
 	initialState,
 	reducers: {
 		changeCategory(state, action: PayloadAction<string>) {
@@ -83,20 +83,20 @@ const filmsReducer = createSlice({
 		},
 	},
 	extraReducers: (builder) => {
-		builder.addCase(fetchFilms.pending, (state) => {
+		builder.addCase(fetchMovies.pending, (state) => {
 			state.status = 'loading';
 		});
 		builder.addCase(
-			fetchFilms.fulfilled,
+			fetchMovies.fulfilled,
 			(
 				state,
 				{ payload }: PayloadAction<{ totalPages: number; results: MovieAPI[] }>
 			) => {
-				state.listfilms = payload.results;
+				state.listMovies = payload.results;
 				state.totalPages = payload.totalPages;
 			}
 		);
-		builder.addCase(fetchFilms.rejected, (state) => {
+		builder.addCase(fetchMovies.rejected, (state) => {
 			state.status = 'failed';
 		});
 

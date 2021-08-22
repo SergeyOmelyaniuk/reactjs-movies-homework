@@ -8,7 +8,7 @@ const ActorCard = ({ actor }: { actor: Actor }) => (
 		<div className={styles.wrapImage}>
 			<img
 				className={styles.image}
-				src={require(`../../mocks/images/actors/${actor.photo}`).default}
+				src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`}
 				alt=''
 			/>
 		</div>

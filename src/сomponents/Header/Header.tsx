@@ -4,7 +4,7 @@ import LanguageBar from './LanguageBar';
 import Search from './Search';
 import { languages, translate } from '../../constants';
 
-import { setSearcValue } from '../../store/filmsSlice';
+import { setSearcValue } from '../../store/moviesSlice';
 import { setCurrentlanguage } from '../../store/languageSlice';
 
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
@@ -14,7 +14,7 @@ import { Language } from '../../types';
 const Header = () => {
 	const dispatch = useAppDispatch();
 
-	const searchValue = useAppSelector((state) => state.films.searchValue);
+	const searchValue = useAppSelector((state) => state.movies.searchValue);
 	const currentLanguage = useAppSelector(
 		(state) => state.language.languageSelected
 	);

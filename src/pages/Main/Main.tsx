@@ -11,21 +11,21 @@ import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import {
 	changeCategory,
 	setCurrentPage,
-	fetchFilms,
+	fetchMovies,
 	fetchGenres,
-} from '../../store/filmsSlice';
+} from '../../store/moviesSlice';
 import MovieList from '../../сomponents/MovieList';
 
 const Main = () => {
-	const categoryValue = useAppSelector((state) => state.films.categoryValue);
-	const totalPages = useAppSelector((state) => state.films.totalPages);
-	const currentPage = useAppSelector((state) => state.films.currentPage);
-	const listFilms = useAppSelector((state) => state.films.listfilms);
-	const searchValue = useAppSelector((state) => state.films.searchValue);
+	const categoryValue = useAppSelector((state) => state.movies.categoryValue);
+	const totalPages = useAppSelector((state) => state.movies.totalPages);
+	const currentPage = useAppSelector((state) => state.movies.currentPage);
+	const listMovies = useAppSelector((state) => state.movies.listMovies);
+	const searchValue = useAppSelector((state) => state.movies.searchValue);
 	const currentLanguage = useAppSelector(
 		(state) => state.language.languageSelected
 	);
-	const listGenres = useAppSelector((state) => state.films.listGenres);
+	const listGenres = useAppSelector((state) => state.movies.listGenres);
 
 	const dispatch = useAppDispatch();
 
@@ -41,13 +41,13 @@ const Main = () => {
 	}, [dispatch, currentLanguage]);
 
 	useEffect(() => {
-		dispatch(fetchFilms());
+		dispatch(fetchMovies());
 		window.scrollTo(0, 0);
 	}, [dispatch, currentPage, categoryValue, searchValue, currentLanguage]);
 
 	const movies = useMemo(() => {
-		return getGenresFilms(listGenres, listFilms);
-	}, [listGenres, listFilms]);
+		return getGenresFilms(listGenres, listMovies);
+	}, [listGenres, listMovies]);
 
 	return (
 		<div className={styles.main}>

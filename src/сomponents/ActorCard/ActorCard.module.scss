@@ -1,12 +1,12 @@
+@import '../../scss/variables.scss';
+
 .actorCard {
-	height: 280px;
 	cursor: pointer;
 }
 
 .wrapImage {
 	max-width: 152px;
 	width: 100%;
-	height: 215px;
 }
 
 .image {
@@ -18,6 +18,10 @@
 
 .content {
 	color: white;
+	word-wrap: normal;
+	overflow-wrap: normal;
+	width: 152px;
+	line-height: 1.4;
 }
 
 .title {
@@ -28,6 +32,7 @@
 }
 
 .character {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 300;
+	color: $colorGreyDark;
 }

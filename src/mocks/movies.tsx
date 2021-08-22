@@ -36,6 +36,7 @@ export const movies: Movies = {
 					photo: 'photo_1.jpg',
 					photos: ['photo_1.jpg', 'photo_2.jpg', 'photo_3.jpg', 'photo_4.jpg'],
 					character: 'Lindy',
+					profile_path: '',
 				},
 				{
 					id: 2,
@@ -46,6 +47,7 @@ export const movies: Movies = {
 					photo: 'photo_2.jpg',
 					photos: ['photo_1.jpg', 'photo_2.jpg', 'photo_3.jpg', 'photo_4.jpg'],
 					character: 'Dr. Ivan Munchin',
+					profile_path: '',
 				},
 				{
 					id: 3,
@@ -56,6 +58,7 @@ export const movies: Movies = {
 					photo: 'photo_3.jpg',
 					photos: ['photo_1.jpg', 'photo_2.jpg', 'photo_3.jpg', 'photo_4.jpg'],
 					character: 'Detective Vicars',
+					profile_path: '',
 				},
 				{
 					id: 4,
@@ -66,6 +69,7 @@ export const movies: Movies = {
 					photo: 'photo_4.jpg',
 					photos: ['photo_1.jpg', 'photo_2.jpg', 'photo_3.jpg', 'photo_4.jpg'],
 					character: 'Justin',
+					profile_path: '',
 				},
 				{
 					id: 5,
@@ -76,6 +80,7 @@ export const movies: Movies = {
 					photo: 'photo_5.jpg',
 					photos: ['photo_1.jpg', 'photo_2.jpg', 'photo_3.jpg', 'photo_4.jpg'],
 					character: 'Detective Nevin',
+					profile_path: '',
 				},
 				{
 					id: 6,
@@ -86,6 +91,7 @@ export const movies: Movies = {
 					photo: 'photo_6.jpg',
 					photos: ['photo_1.jpg', 'photo_2.jpg', 'photo_3.jpg', 'photo_4.jpg'],
 					character: 'Gareth Fizel',
+					profile_path: '',
 				},
 			],
 		},
