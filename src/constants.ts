@@ -24,6 +24,11 @@ export const translate: any = {
 		images: 'Images',
 		recommendations: 'RECOMMENDATIONS',
 		minutes: 'minutes',
+		birthday: 'Birthday',
+		placeOfBirth: 'Place of birth',
+		biography: 'Biography',
+		photos: 'Photos',
+		knownBy: 'known by',
 	},
 	ru: {
 		title: 'заголовок',
@@ -43,5 +48,10 @@ export const translate: any = {
 		images: 'Изображения',
 		recommendations: 'РЕКОМЕНДУЕМЫЕ',
 		minutes: 'минут',
+		birthday: 'День рождения',
+		placeOfBirth: 'Место рождения',
+		biography: 'Биография',
+		photos: 'Фотографии',
+		knownBy: 'известен по фильмам',
 	},
 };

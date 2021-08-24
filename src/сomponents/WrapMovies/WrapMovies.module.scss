@@ -2,8 +2,15 @@
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -40px;
+	@media (max-width: 1600px) {
+		margin: 0 -9px;
+		justify-content: space-between;
+	}
 }
 
 .wrapMovie {
 	margin: 0px 40px 40px 40px;
+	@media (max-width: 1600px) {
+		margin: 0px 9px 33px 9px;
+	}
 }

@@ -30,7 +30,7 @@ export interface Actor {
 	id: number;
 	name: string;
 	birthday: string;
-	placeBirth: string;
+	place_of_birth: string;
 	biography: string;
 	photo: string;
 	photos: string[];

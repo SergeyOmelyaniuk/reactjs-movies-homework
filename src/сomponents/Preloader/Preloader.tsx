@@ -7,7 +7,7 @@ const Preloader = () => (
 			<img
 				className={styles.image}
 				src={require(`../../assets/images/loader.png`).default}
-				alt=''
+				alt='loader'
 			/>
 		</div>
 		<div className={styles.title}>Loading...</div>

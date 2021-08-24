@@ -1,5 +1,6 @@
 import React, { FormEvent, useState } from 'react';
 import styles from './Search.module.scss';
+import { useHistory } from 'react-router-dom';
 
 interface SearchProps {
 	searchValue: string;
@@ -8,10 +9,12 @@ interface SearchProps {
 }
 
 const Search = ({ searchValue, setSearcValue, placeholder }: SearchProps) => {
+	const history = useHistory();
 	const [searchInput, setSearchInput] = useState(searchValue);
 
 	const onSubmit = (event: FormEvent) => {
 		event.preventDefault();
+		history.push('/');
 		setSearcValue(searchInput);
 	};
 

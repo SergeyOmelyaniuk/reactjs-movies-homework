@@ -1,5 +1,8 @@
 .actorDescription {
 	display: flex;
+	@media (max-width: 800px) {
+		display: block;
+	}
 }
 
 .wrapPhotoActor {
@@ -8,6 +11,17 @@
 	height: 640px;
 	margin-right: 40px;
 	flex-shrink: 0;
+	@media (max-width: 1600px) {
+		max-width: 352px;
+		height: 531px;
+		margin-right: 33px;
+	}
+	@media (max-width: 800px) {
+		margin: 0px auto 20px;
+	}
+	@media (max-width: 400px) {
+		height: 100%;
+	}
 }
 
 .photoActor {
@@ -20,22 +34,37 @@
 .infoActor {
 	font-weight: 300;
 	font-size: 16px;
+	@media (max-width: 1600px) {
+		font-size: 13px;
+	}
 }
 
 .nameActor {
 	font-size: 46px;
 	margin-bottom: 50px;
+	@media (max-width: 1600px) {
+		font-size: 38px;
+		margin-bottom: 41px;
+	}
 }
 
 .titlePhotosActor {
 	font-size: 28px;
 	display: block;
 	margin-bottom: 30px;
+	@media (max-width: 1600px) {
+		font-size: 23px;
+		margin-bottom: 25px;
+	}
 }
 
 .wrapPhotosActor {
 	display: flex;
+	flex-wrap: wrap;
 	margin-bottom: 80px;
+	@media (max-width: 1600px) {
+		margin-bottom: 66px;
+	}
 }
 
 .wrapPhotoSmallActor {
@@ -43,6 +72,12 @@
 	width: 100%;
 	height: 230px;
 	margin-right: 40px;
+	margin-bottom: 15px;
+	@media (max-width: 1600px) {
+		max-width: 124px;
+		height: 191px;
+		margin-right: 33px;
+	}
 }
 
 .photoSmallActor {

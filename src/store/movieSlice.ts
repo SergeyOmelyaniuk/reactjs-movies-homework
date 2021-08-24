@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import { MovieAPI, Genre, MovieDetails, MovieImages, Actor } from '../types';
+import { MovieAPI, MovieDetails, MovieImages, Actor } from '../types';
 
 export const fetchMovieDetails = createAsyncThunk(
 	'movie/fetchMovieDetails',
@@ -38,7 +38,6 @@ export interface MovieState {
 	moviesRecommendations: MovieAPI[] | null;
 	topCast: Actor[] | null;
 	status: string | null;
-	listGenres: Genre[];
 	//TODO
 	// currentIdFilm: number;
 }
@@ -49,13 +48,12 @@ const initialState: MovieState = {
 	moviesRecommendations: null,
 	topCast: null,
 	status: null,
-	listGenres: [],
 	//TODO
 	// currentIdFilm: 460465,
 };
 
 const movieReducer = createSlice({
-	name: 'movies',
+	name: 'movie',
 	initialState,
 	reducers: {},
 	extraReducers: (builder) => {
@@ -66,11 +64,11 @@ const movieReducer = createSlice({
 			fetchMovieDetails.fulfilled,
 			//TODO
 			(state, { payload }: PayloadAction<any>) => {
+				state.status = 'fulfilled';
 				state.movieDetails = payload.movie;
 				state.movieImages = payload.images.backdrops;
 				state.moviesRecommendations = payload.recommendations.results;
 				state.topCast = payload.actors.cast;
-				state.status = 'fulfilled';
 			}
 		);
 		builder.addCase(fetchMovieDetails.rejected, (state) => {

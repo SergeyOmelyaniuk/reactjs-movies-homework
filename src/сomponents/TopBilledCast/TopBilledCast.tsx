@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ActorCard from '../ActorCard';
 import styles from './TopBilledCast.module.scss';
 
@@ -12,7 +12,17 @@ interface TopBilledCastProps {
 const numberActorsPerPage = 6;
 
 const TopBilledCast = ({ actors, currentLanguage }: TopBilledCastProps) => {
-	const listActors = actors.slice(0, numberActorsPerPage);
+	const [numberActors, setNumberActors] = useState(numberActorsPerPage);
+
+	const handlerShowAllActors = () => {
+		setNumberActors(actors.length);
+	};
+
+	const listActors = actors.slice(0, numberActors);
+
+	useEffect(() => {
+		setNumberActors(numberActorsPerPage);
+	}, [actors]);
 
 	return (
 		<div className={styles.topBilledCast}>
@@ -20,7 +30,7 @@ const TopBilledCast = ({ actors, currentLanguage }: TopBilledCastProps) => {
 				<span className={styles.title}>
 					{translate[currentLanguage.title].topBilledCast}
 				</span>
-				<button className={styles.button}>
+				<button className={styles.button} onClick={handlerShowAllActors}>
 					{translate[currentLanguage.title].buttonShowAll}
 				</button>
 			</div>

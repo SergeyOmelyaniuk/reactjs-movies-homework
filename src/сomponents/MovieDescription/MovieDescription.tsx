@@ -6,13 +6,14 @@ import { Actor, MovieDetails, MovieImages, Language, Genre } from '../../types';
 import TextBlock from '../TextBlock';
 import { translate } from '../../constants';
 
+const numberImagesPerPage = 8;
+
 interface MovieDescriptionProps {
 	movieDetails: MovieDetails;
 	movieImages: MovieImages[];
 	topCast: Actor[];
 	currentLanguage: Language;
 }
-const numberImagesPerPage = 8;
 
 const MovieDescription = ({
 	movieDetails,
@@ -21,15 +22,14 @@ const MovieDescription = ({
 	currentLanguage,
 }: MovieDescriptionProps) => {
 	const listImages = movieImages.slice(0, numberImagesPerPage);
+	const moviePoster = movieDetails.poster_path
+		? `https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`
+		: require(`../../assets/images/movie-card.png`).default;
 
 	return (
 		<div className={styles.movieDescription}>
 			<div className={styles.wrapPhotoMovie}>
-				<img
-					className={styles.photoMovie}
-					src={`https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`}
-					alt=''
-				/>
+				<img className={styles.photoMovie} src={moviePoster} alt='movie' />
 				<span className={styles.rating}>{movieDetails.vote_average}</span>
 			</div>
 			<div className={styles.infoMovie}>
@@ -76,7 +76,7 @@ const MovieDescription = ({
 									<img
 										className={styles.image}
 										src={`https://image.tmdb.org/t/p/w500/${image.file_path}`}
-										alt=''
+										alt='movie'
 									/>
 								</div>
 							);
