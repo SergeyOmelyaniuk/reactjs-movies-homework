@@ -11,18 +11,87 @@ exports[`Main should render with search results 1`] = `
       >
         Search results:
       </h3>
-      <p
-        class="noResults"
+      <div
+        class="wrapMovies"
       >
-        No results found
-      </p>
+        <div
+          class="wrapMovie"
+        >
+          <a
+            class="movieCard"
+            href="/movies/1"
+          >
+            <div
+              class="wrapImage"
+            >
+              <div
+                class="overlay"
+              />
+              <img
+                alt="movie"
+                class="image"
+                src="https://image.tmdb.org/t/p/w500/film_1.jpg"
+              />
+              <span
+                class="rating"
+              >
+                68.0
+              </span>
+              <div
+                class="preview"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <h2
+                class="title"
+              >
+                Красотка на взводе
+              </h2>
+              <p
+                class="genre"
+              >
+                <span />
+                <span />
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
     <div
       class="wrapPagination"
     >
       <ul
         class="pagination"
-      />
+      >
+        <li
+          class="item active"
+        >
+          1
+        </li>
+        <li
+          class="item"
+        >
+          2
+        </li>
+        <li
+          class="item"
+        >
+          3
+        </li>
+        <li
+          class="item"
+        >
+          4
+        </li>
+        <li
+          class="item"
+        >
+          5
+        </li>
+      </ul>
     </div>
   </div>
 </div>
@@ -77,13 +146,84 @@ exports[`Main should render with the list of movies 1`] = `
     </div>
     <div
       class="wrapMovies"
-    />
+    >
+      <div
+        class="wrapMovie"
+      >
+        <a
+          class="movieCard"
+          href="/movies/1"
+        >
+          <div
+            class="wrapImage"
+          >
+            <div
+              class="overlay"
+            />
+            <img
+              alt="movie"
+              class="image"
+              src="https://image.tmdb.org/t/p/w500/film_1.jpg"
+            />
+            <span
+              class="rating"
+            >
+              68.0
+            </span>
+            <div
+              class="preview"
+            />
+          </div>
+          <div
+            class="content"
+          >
+            <h2
+              class="title"
+            >
+              Красотка на взводе
+            </h2>
+            <p
+              class="genre"
+            >
+              <span />
+              <span />
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
     <div
       class="wrapPagination"
     >
       <ul
         class="pagination"
-      />
+      >
+        <li
+          class="item active"
+        >
+          1
+        </li>
+        <li
+          class="item"
+        >
+          2
+        </li>
+        <li
+          class="item"
+        >
+          3
+        </li>
+        <li
+          class="item"
+        >
+          4
+        </li>
+        <li
+          class="item"
+        >
+          5
+        </li>
+      </ul>
     </div>
   </div>
 </div>

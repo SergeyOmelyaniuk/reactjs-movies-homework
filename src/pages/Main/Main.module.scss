@@ -1,15 +1,24 @@
 .main {
 	padding: 30px 0px 60px 0px;
+	@media (max-width: 1600px) {
+		padding: 25px 0px 50px 0px;
+	}
 }
 
 .wrapCategoriesSort {
 	display: flex;
 	justify-content: flex-end;
 	margin-bottom: 30px;
+	@media (max-width: 1600px) {
+		margin-bottom: 25px;
+	}
 }
 
 .wrapPagination {
 	display: flex;
 	justify-content: center;
 	margin-top: 60px;
+	@media (max-width: 1600px) {
+		margin-top: 50px;
+	}
 }

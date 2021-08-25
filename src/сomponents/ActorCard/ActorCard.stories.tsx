@@ -1,5 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { BrowserRouter } from 'react-router-dom';
+
 import ActorCard from './ActorCard';
 import { movies } from '../../mocks/movies';
 
@@ -20,7 +22,9 @@ const Template: ComponentStory<typeof ActorCard> = (args) => (
 			alignItems: 'center',
 		}}
 	>
-		<ActorCard {...args} />
+		<BrowserRouter>
+			<ActorCard {...args} />
+		</BrowserRouter>
 	</div>
 );
 

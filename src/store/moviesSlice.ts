@@ -1,22 +1,16 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { translate } from '../constants';
-import getGenresFilms from '../helpers/getGenresFilms';
-import { Movie, Genre } from '../types';
+import { MovieAPI, Genre } from '../types';
 
-export const fetchFilms = createAsyncThunk(
-	'todos/fetchFilms',
-	async function (_, { rejectWithValue, getState, dispatch }) {
-		const { films } = getState() as any;
-
-		if (films.listGenres.length === 0) {
-			await dispatch(fetchGenres());
-		}
-
+export const fetchMovies = createAsyncThunk(
+	'movies/fetchMovies',
+	async function (_, { rejectWithValue, getState }) {
 		const state = getState() as any;
-		const { currentPage, categoryValue, listGenres, searchValue } = state.films;
+		const { currentPage, categoryValue, searchValue } = state.movies;
+		const { languageSelected } = state.language;
 		const url = searchValue
-			? `${process.env.REACT_APP_API_URL}/search/movie?query=${searchValue}&api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${currentPage}`
-			: `${process.env.REACT_APP_API_URL}/movie/${categoryValue}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${currentPage}`;
+			? `${process.env.REACT_APP_API_URL}/search/movie?query=${searchValue}&api_key=${process.env.REACT_APP_API_KEY}&language=${languageSelected.value}&page=${currentPage}`
+			: `${process.env.REACT_APP_API_URL}/movie/${categoryValue}?api_key=${process.env.REACT_APP_API_KEY}&language=${languageSelected.value}&page=${currentPage}`;
 
 		try {
 			const response = await fetch(url);
@@ -25,7 +19,7 @@ export const fetchFilms = createAsyncThunk(
 
 			return {
 				totalPages: data.total_pages,
-				results: getGenresFilms(listGenres, data.results),
+				results: data.results,
 			};
 		} catch (error) {
 			return rejectWithValue(error.message);
@@ -34,11 +28,13 @@ export const fetchFilms = createAsyncThunk(
 );
 
 export const fetchGenres = createAsyncThunk(
-	'todos/fetchGenres',
-	async function (_, { rejectWithValue }) {
+	'movies/fetchGenres',
+	async function (_, { rejectWithValue, getState }) {
+		const state = getState() as any;
+		const { languageSelected } = state.language;
 		try {
 			const response = await fetch(
-				`${process.env.REACT_APP_API_URL}/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+				`${process.env.REACT_APP_API_URL}/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}&language=${languageSelected.value}`
 			);
 
 			const data = await response.json();
@@ -54,7 +50,7 @@ export interface FilmsState {
 	categoryValue: string;
 	currentPage: number;
 	totalPages: number;
-	listfilms: Movie[];
+	listMovies: MovieAPI[];
 	status: null | string;
 	listGenres: Genre[];
 	searchValue: string;
@@ -64,14 +60,14 @@ export const initialState: FilmsState = {
 	categoryValue: translate.en.categories[0].value,
 	currentPage: 1,
 	totalPages: 0,
-	listfilms: [],
+	listMovies: [],
 	status: null,
 	listGenres: [],
 	searchValue: '',
 };
 
 const filmsReducer = createSlice({
-	name: 'films',
+	name: 'movies',
 	initialState,
 	reducers: {
 		changeCategory(state, action: PayloadAction<string>) {
@@ -87,20 +83,20 @@ const filmsReducer = createSlice({
 		},
 	},
 	extraReducers: (builder) => {
-		builder.addCase(fetchFilms.pending, (state) => {
+		builder.addCase(fetchMovies.pending, (state) => {
 			state.status = 'loading';
 		});
 		builder.addCase(
-			fetchFilms.fulfilled,
+			fetchMovies.fulfilled,
 			(
 				state,
-				{ payload }: PayloadAction<{ totalPages: number; results: Movie[] }>
+				{ payload }: PayloadAction<{ totalPages: number; results: MovieAPI[] }>
 			) => {
-				state.listfilms = payload.results;
+				state.listMovies = payload.results;
 				state.totalPages = payload.totalPages;
 			}
 		);
-		builder.addCase(fetchFilms.rejected, (state) => {
+		builder.addCase(fetchMovies.rejected, (state) => {
 			state.status = 'failed';
 		});
 

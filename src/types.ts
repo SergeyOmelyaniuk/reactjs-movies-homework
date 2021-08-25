@@ -27,13 +27,15 @@ export interface MovieAPI extends BaseMovie {
 }
 
 export interface Actor {
+	id: number;
 	name: string;
 	birthday: string;
-	placeBirth: string;
+	place_of_birth: string;
 	biography: string;
 	photo: string;
 	photos: string[];
 	character: string;
+	profile_path: string;
 }
 
 export interface Category {
@@ -50,4 +52,19 @@ export interface Language {
 export interface Genre {
 	id: number;
 	name: string;
+}
+
+export interface MovieDetails {
+	poster_path: string;
+	vote_average: number;
+	title: string;
+	overview: string;
+	release_date: string;
+	revenue: number;
+	runtime: number;
+	genres: Genre[];
+}
+
+export interface MovieImages {
+	file_path: string;
 }

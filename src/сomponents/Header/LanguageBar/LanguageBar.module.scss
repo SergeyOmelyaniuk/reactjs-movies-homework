@@ -3,6 +3,10 @@
 .languageBar {
 	position: relative;
 	background-color: $colorBackgroundHeader;
+	@media (max-width: 800px) {
+		order: -1;
+		margin-bottom: 20px;
+	}
 }
 
 .menu {
@@ -24,6 +28,10 @@
 		background-color: $colorWhite;
 		border: 1px solid $colorBackgroundHeader;
 		border-radius: 3px;
+	}
+	@media (max-width: 1600px) {
+		font-size: 16px;
+		padding: 6px 8px;
 	}
 }
 
@@ -52,6 +60,18 @@
 		border: 8px solid transparent;
 		border-bottom: 10px solid $colorWhite;
 		transform: translateY(100%);
+		@media (max-width: 1600px) {
+			right: 26px;
+			top: -30px;
+			border-bottom: 8px solid $colorWhite;
+		}
+	}
+	@media (max-width: 1600px) {
+		font-size: 16px;
+		width: 66px;
+		height: 83px;
+		right: -13px;
+		top: 53px;
 	}
 }
 
@@ -60,6 +80,9 @@
 	width: 100%;
 	&:first-child {
 		margin-bottom: 20px;
+		@media (max-width: 1600px) {
+			margin-bottom: 16px;
+		}
 	}
 	&:hover {
 		font-weight: 700;

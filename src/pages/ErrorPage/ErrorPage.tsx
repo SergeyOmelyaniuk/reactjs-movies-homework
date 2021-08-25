@@ -7,7 +7,7 @@ const ErrorPage = () => (
 			<img
 				className={styles.image}
 				src={require(`../../assets/images/error.png`).default}
-				alt=''
+				alt='error'
 			/>
 		</div>
 		<div className={styles.title}>Something went wrong</div>

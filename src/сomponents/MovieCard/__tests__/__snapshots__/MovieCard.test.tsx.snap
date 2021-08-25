@@ -2,8 +2,9 @@
 
 exports[`MovieCard should render 1`] = `
 <div>
-  <div
+  <a
     class="movieCard"
+    href="/movies/1"
   >
     <div
       class="wrapImage"
@@ -12,14 +13,14 @@ exports[`MovieCard should render 1`] = `
         class="overlay"
       />
       <img
-        alt=""
+        alt="movie"
         class="image"
         src="https://image.tmdb.org/t/p/w500/film_1.jpg"
       />
       <span
         class="rating"
       >
-        68
+        68.0
       </span>
       <div
         class="preview"
@@ -44,6 +45,6 @@ exports[`MovieCard should render 1`] = `
         </span>
       </p>
     </div>
-  </div>
+  </a>
 </div>
 `;

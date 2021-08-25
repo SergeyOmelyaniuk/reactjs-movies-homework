@@ -1,5 +1,8 @@
 .actorProfile {
 	padding-top: 32px;
+	@media (max-width: 1600px) {
+		padding-top: 26px;
+	}
 }
 
 .titleKnownBy {
@@ -7,4 +10,8 @@
 	text-transform: uppercase;
 	display: block;
 	margin-bottom: 50px;
+	@media (max-width: 1600px) {
+		font-size: 28px;
+		margin-bottom: 41px;
+	}
 }

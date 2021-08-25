@@ -1,13 +1,22 @@
 .textBlock {
 	margin-bottom: 50px;
+	@media (max-width: 1600px) {
+		margin-bottom: 42px;
+	}
 }
 
 .title {
 	display: block;
 	margin-bottom: 5px;
+	@media (max-width: 1600px) {
+		margin-bottom: 4px;
+	}
 }
 
 .text {
 	font-size: 20px;
 	line-height: 1.5;
+	@media (max-width: 1600px) {
+		font-size: 16px;
+	}
 }
