@@ -2,14 +2,15 @@
 
 exports[`ActorCard should render 1`] = `
 <div>
-  <div
+  <a
     class="actorCard"
+    href="/actors/1"
   >
     <div
       class="wrapImage"
     >
       <img
-        alt=""
+        alt="actor"
         class="image"
       />
     </div>
@@ -27,6 +28,6 @@ exports[`ActorCard should render 1`] = `
         Lindy
       </p>
     </div>
-  </div>
+  </a>
 </div>
 `;

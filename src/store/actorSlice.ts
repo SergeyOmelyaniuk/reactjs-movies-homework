@@ -41,6 +41,19 @@ const initialState: ActorState = {
 	actorKnowBy: null,
 };
 
+interface FetchActorProfilePayload {
+	actor: Actor;
+	images: { profiles: MovieImages[] };
+	movies: { cast: MovieAPI[] };
+}
+
+export interface FetchActorProfile {
+	status: string | null;
+	actorProfile: Actor | null;
+	actorImages: MovieImages[] | null;
+	actorKnowBy: MovieAPI[] | null;
+}
+
 const actorReducer = createSlice({
 	name: 'actor',
 	initialState,
@@ -51,8 +64,7 @@ const actorReducer = createSlice({
 		});
 		builder.addCase(
 			fetchActorProfile.fulfilled,
-			//TODO
-			(state, { payload }: PayloadAction<any>) => {
+			(state, { payload }: PayloadAction<FetchActorProfilePayload>) => {
 				state.status = 'fulfilled';
 				state.actorProfile = payload.actor;
 				state.actorImages = payload.images.profiles;

@@ -9,7 +9,7 @@ exports[`ActorDescription should render 1`] = `
       class="wrapPhotoActor"
     >
       <img
-        alt=""
+        alt="actor"
         class="photoActor"
       />
     </div>
@@ -81,32 +81,18 @@ exports[`ActorDescription should render 1`] = `
             class="wrapPhotoSmallActor"
           >
             <img
-              alt=""
+              alt="movie"
               class="photoSmallActor"
+              src="https://image.tmdb.org/t/p/w500/path1"
             />
           </div>
           <div
             class="wrapPhotoSmallActor"
           >
             <img
-              alt=""
+              alt="movie"
               class="photoSmallActor"
-            />
-          </div>
-          <div
-            class="wrapPhotoSmallActor"
-          >
-            <img
-              alt=""
-              class="photoSmallActor"
-            />
-          </div>
-          <div
-            class="wrapPhotoSmallActor"
-          >
-            <img
-              alt=""
-              class="photoSmallActor"
+              src="https://image.tmdb.org/t/p/w500/path2"
             />
           </div>
         </div>

@@ -5,9 +5,7 @@ import WrapMovies from '../../сomponents/WrapMovies';
 import styles from './Main.module.scss';
 import { translate } from '../../constants';
 import getGenresFilms from '../../helpers/getGenresFilms';
-
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
-
 import {
 	changeCategory,
 	setCurrentPage,
@@ -15,17 +13,24 @@ import {
 	fetchGenres,
 } from '../../store/moviesSlice';
 import MovieList from '../../сomponents/MovieList';
+import {
+	getCategoryValue,
+	getTotalPages,
+	getCurrentPage,
+	getListMovies,
+	getSearchValue,
+	getListGenres,
+	getLanguageSelected,
+} from '../../selectors';
 
 const Main = () => {
-	const categoryValue = useAppSelector((state) => state.movies.categoryValue);
-	const totalPages = useAppSelector((state) => state.movies.totalPages);
-	const currentPage = useAppSelector((state) => state.movies.currentPage);
-	const listMovies = useAppSelector((state) => state.movies.listMovies);
-	const searchValue = useAppSelector((state) => state.movies.searchValue);
-	const currentLanguage = useAppSelector(
-		(state) => state.language.languageSelected
-	);
-	const listGenres = useAppSelector((state) => state.movies.listGenres);
+	const categoryValue = useAppSelector(getCategoryValue);
+	const totalPages = useAppSelector(getTotalPages);
+	const currentPage = useAppSelector(getCurrentPage);
+	const listMovies = useAppSelector(getListMovies);
+	const searchValue = useAppSelector(getSearchValue);
+	const currentLanguage = useAppSelector(getLanguageSelected);
+	const listGenres = useAppSelector(getListGenres);
 
 	const dispatch = useAppDispatch();
 

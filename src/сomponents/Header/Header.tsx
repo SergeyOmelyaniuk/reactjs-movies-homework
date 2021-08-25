@@ -3,21 +3,17 @@ import styles from './Header.module.scss';
 import LanguageBar from './LanguageBar';
 import Search from './Search';
 import { languages, translate } from '../../constants';
-
 import { setSearcValue } from '../../store/moviesSlice';
 import { setCurrentlanguage } from '../../store/languageSlice';
-
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
-
+import { getSearchValue, getLanguageSelected } from '../../selectors';
 import { Language } from '../../types';
 
 const Header = () => {
 	const dispatch = useAppDispatch();
 
-	const searchValue = useAppSelector((state) => state.movies.searchValue);
-	const currentLanguage = useAppSelector(
-		(state) => state.language.languageSelected
-	);
+	const searchValue = useAppSelector(getSearchValue);
+	const currentLanguage = useAppSelector(getLanguageSelected);
 
 	const handlerSetSearcValue = (value: string) => {
 		dispatch(setSearcValue(value));

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ActorCard from '../ActorCard';
 import styles from './TopBilledCast.module.scss';
-
 import { Actor, Language } from '../../types';
 import { translate } from '../../constants';
 
@@ -35,7 +34,7 @@ const TopBilledCast = ({ actors, currentLanguage }: TopBilledCastProps) => {
 				</button>
 			</div>
 			<div className={styles.wrap}>
-				{listActors.map((actor: Actor) => (
+				{listActors.map((actor) => (
 					<ActorCard key={actor.name} actor={actor} />
 				))}
 			</div>

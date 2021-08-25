@@ -9,9 +9,15 @@ exports[`MovieDescription should render 1`] = `
       class="wrapPhotoMovie"
     >
       <img
-        alt=""
+        alt="movie"
         class="photoMovie"
+        src="https://image.tmdb.org/t/p/w500/film_1.jpg"
       />
+      <span
+        class="rating"
+      >
+        68
+      </span>
     </div>
     <div
       class="infoMovie"
@@ -83,7 +89,7 @@ exports[`MovieDescription should render 1`] = `
         <p
           class="text"
         >
-          2:14
+          120 minutes
         </p>
       </div>
       <div
@@ -92,12 +98,7 @@ exports[`MovieDescription should render 1`] = `
         <div
           class="genre"
         >
-          Боевик
-        </div>
-        <div
-          class="genre"
-        >
-          Комедия
+          first genre
         </div>
       </div>
       <div
@@ -123,14 +124,15 @@ exports[`MovieDescription should render 1`] = `
           <div
             class="wrap"
           >
-            <div
+            <a
               class="actorCard"
+              href="/actors/1"
             >
               <div
                 class="wrapImage"
               >
                 <img
-                  alt=""
+                  alt="actor"
                   class="image"
                 />
               </div>
@@ -148,15 +150,16 @@ exports[`MovieDescription should render 1`] = `
                   Lindy
                 </p>
               </div>
-            </div>
-            <div
+            </a>
+            <a
               class="actorCard"
+              href="/actors/2"
             >
               <div
                 class="wrapImage"
               >
                 <img
-                  alt=""
+                  alt="actor"
                   class="image"
                 />
               </div>
@@ -174,15 +177,16 @@ exports[`MovieDescription should render 1`] = `
                   Dr. Ivan Munchin
                 </p>
               </div>
-            </div>
-            <div
+            </a>
+            <a
               class="actorCard"
+              href="/actors/3"
             >
               <div
                 class="wrapImage"
               >
                 <img
-                  alt=""
+                  alt="actor"
                   class="image"
                 />
               </div>
@@ -200,15 +204,16 @@ exports[`MovieDescription should render 1`] = `
                   Detective Vicars
                 </p>
               </div>
-            </div>
-            <div
+            </a>
+            <a
               class="actorCard"
+              href="/actors/4"
             >
               <div
                 class="wrapImage"
               >
                 <img
-                  alt=""
+                  alt="actor"
                   class="image"
                 />
               </div>
@@ -226,15 +231,16 @@ exports[`MovieDescription should render 1`] = `
                   Justin
                 </p>
               </div>
-            </div>
-            <div
+            </a>
+            <a
               class="actorCard"
+              href="/actors/5"
             >
               <div
                 class="wrapImage"
               >
                 <img
-                  alt=""
+                  alt="actor"
                   class="image"
                 />
               </div>
@@ -252,15 +258,16 @@ exports[`MovieDescription should render 1`] = `
                   Detective Nevin
                 </p>
               </div>
-            </div>
-            <div
+            </a>
+            <a
               class="actorCard"
+              href="/actors/6"
             >
               <div
                 class="wrapImage"
               >
                 <img
-                  alt=""
+                  alt="actor"
                   class="image"
                 />
               </div>
@@ -278,7 +285,7 @@ exports[`MovieDescription should render 1`] = `
                   Gareth Fizel
                 </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -297,64 +304,18 @@ exports[`MovieDescription should render 1`] = `
             class="wrapImage"
           >
             <img
-              alt=""
+              alt="movie"
               class="image"
+              src="https://image.tmdb.org/t/p/w500/path1"
             />
           </div>
           <div
             class="wrapImage"
           >
             <img
-              alt=""
+              alt="movie"
               class="image"
-            />
-          </div>
-          <div
-            class="wrapImage"
-          >
-            <img
-              alt=""
-              class="image"
-            />
-          </div>
-          <div
-            class="wrapImage"
-          >
-            <img
-              alt=""
-              class="image"
-            />
-          </div>
-          <div
-            class="wrapImage"
-          >
-            <img
-              alt=""
-              class="image"
-            />
-          </div>
-          <div
-            class="wrapImage"
-          >
-            <img
-              alt=""
-              class="image"
-            />
-          </div>
-          <div
-            class="wrapImage"
-          >
-            <img
-              alt=""
-              class="image"
-            />
-          </div>
-          <div
-            class="wrapImage"
-          >
-            <img
-              alt=""
-              class="image"
+              src="https://image.tmdb.org/t/p/w500/path2"
             />
           </div>
         </div>

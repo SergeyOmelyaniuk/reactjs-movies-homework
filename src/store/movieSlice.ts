@@ -6,8 +6,6 @@ export const fetchMovieDetails = createAsyncThunk(
 	async function (id: string, { rejectWithValue, getState }) {
 		const state = getState() as any;
 		const { languageSelected } = state.language;
-		// const { currentIdFilm } = state.film;
-		//TODO
 
 		try {
 			const [movie, images, recommendations, actors] = await Promise.all([
@@ -32,14 +30,19 @@ export const fetchMovieDetails = createAsyncThunk(
 	}
 );
 
+interface FetchMovieDetailsPayload {
+	movie: MovieDetails;
+	images: { backdrops: MovieImages[] };
+	recommendations: { results: MovieAPI[] };
+	actors: { cast: Actor[] };
+}
+
 export interface MovieState {
 	movieDetails: MovieDetails | null;
 	movieImages: MovieImages[] | null;
 	moviesRecommendations: MovieAPI[] | null;
 	topCast: Actor[] | null;
 	status: string | null;
-	//TODO
-	// currentIdFilm: number;
 }
 
 const initialState: MovieState = {
@@ -48,8 +51,6 @@ const initialState: MovieState = {
 	moviesRecommendations: null,
 	topCast: null,
 	status: null,
-	//TODO
-	// currentIdFilm: 460465,
 };
 
 const movieReducer = createSlice({
@@ -62,8 +63,7 @@ const movieReducer = createSlice({
 		});
 		builder.addCase(
 			fetchMovieDetails.fulfilled,
-			//TODO
-			(state, { payload }: PayloadAction<any>) => {
+			(state, { payload }: PayloadAction<FetchMovieDetailsPayload>) => {
 				state.status = 'fulfilled';
 				state.movieDetails = payload.movie;
 				state.movieImages = payload.images.backdrops;
@@ -76,7 +76,5 @@ const movieReducer = createSlice({
 		});
 	},
 });
-//TODO
-// export const { } = movieReducer.actions;
 
 export default movieReducer.reducer;

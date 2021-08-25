@@ -22,14 +22,15 @@ exports[`TopBilledCast should render 1`] = `
     <div
       class="wrap"
     >
-      <div
+      <a
         class="actorCard"
+        href="/actors/1"
       >
         <div
           class="wrapImage"
         >
           <img
-            alt=""
+            alt="actor"
             class="image"
           />
         </div>
@@ -47,15 +48,16 @@ exports[`TopBilledCast should render 1`] = `
             Lindy
           </p>
         </div>
-      </div>
-      <div
+      </a>
+      <a
         class="actorCard"
+        href="/actors/2"
       >
         <div
           class="wrapImage"
         >
           <img
-            alt=""
+            alt="actor"
             class="image"
           />
         </div>
@@ -73,15 +75,16 @@ exports[`TopBilledCast should render 1`] = `
             Dr. Ivan Munchin
           </p>
         </div>
-      </div>
-      <div
+      </a>
+      <a
         class="actorCard"
+        href="/actors/3"
       >
         <div
           class="wrapImage"
         >
           <img
-            alt=""
+            alt="actor"
             class="image"
           />
         </div>
@@ -99,15 +102,16 @@ exports[`TopBilledCast should render 1`] = `
             Detective Vicars
           </p>
         </div>
-      </div>
-      <div
+      </a>
+      <a
         class="actorCard"
+        href="/actors/4"
       >
         <div
           class="wrapImage"
         >
           <img
-            alt=""
+            alt="actor"
             class="image"
           />
         </div>
@@ -125,15 +129,16 @@ exports[`TopBilledCast should render 1`] = `
             Justin
           </p>
         </div>
-      </div>
-      <div
+      </a>
+      <a
         class="actorCard"
+        href="/actors/5"
       >
         <div
           class="wrapImage"
         >
           <img
-            alt=""
+            alt="actor"
             class="image"
           />
         </div>
@@ -151,15 +156,16 @@ exports[`TopBilledCast should render 1`] = `
             Detective Nevin
           </p>
         </div>
-      </div>
-      <div
+      </a>
+      <a
         class="actorCard"
+        href="/actors/6"
       >
         <div
           class="wrapImage"
         >
           <img
-            alt=""
+            alt="actor"
             class="image"
           />
         </div>
@@ -177,7 +183,7 @@ exports[`TopBilledCast should render 1`] = `
             Gareth Fizel
           </p>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </div>

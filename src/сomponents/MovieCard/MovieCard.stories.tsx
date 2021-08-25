@@ -1,5 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { BrowserRouter } from 'react-router-dom';
+
 import MovieCard from './MovieCard';
 import { movies } from '../../mocks/movies';
 
@@ -20,11 +22,13 @@ const Template: ComponentStory<typeof MovieCard> = (args) => (
 			alignItems: 'center',
 		}}
 	>
-		<MovieCard {...args} />
+		<BrowserRouter>
+			<MovieCard {...args} />
+		</BrowserRouter>
 	</div>
 );
 
 export const Default = Template.bind({});
 Default.args = {
-	movie: movies.popular[0],
+	movie: { ...movies.popular[0], poster_path: '' },
 };

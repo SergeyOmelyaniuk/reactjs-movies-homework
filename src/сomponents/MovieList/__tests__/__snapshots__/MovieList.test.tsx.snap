@@ -31,8 +31,9 @@ exports[`MovieList should render with search results 1`] = `
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/1"
         >
           <div
             class="wrapImage"
@@ -41,14 +42,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_1.jpg"
             />
             <span
               class="rating"
             >
-              68
+              68.0
             </span>
             <div
               class="preview"
@@ -73,13 +74,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/2"
         >
           <div
             class="wrapImage"
@@ -88,14 +90,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_2.jpg"
             />
             <span
               class="rating"
             >
-              72
+              72.0
             </span>
             <div
               class="preview"
@@ -120,13 +122,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/3"
         >
           <div
             class="wrapImage"
@@ -135,14 +138,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_3.jpg"
             />
             <span
               class="rating"
             >
-              76
+              76.0
             </span>
             <div
               class="preview"
@@ -164,13 +167,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/4"
         >
           <div
             class="wrapImage"
@@ -179,14 +183,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film42.jpg"
             />
             <span
               class="rating"
             >
-              69
+              69.0
             </span>
             <div
               class="preview"
@@ -208,13 +212,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/5"
         >
           <div
             class="wrapImage"
@@ -223,14 +228,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_5.jpg"
             />
             <span
               class="rating"
             >
-              96
+              96.0
             </span>
             <div
               class="preview"
@@ -252,13 +257,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/6"
         >
           <div
             class="wrapImage"
@@ -267,14 +273,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_6.jpg"
             />
             <span
               class="rating"
             >
-              77
+              77.0
             </span>
             <div
               class="preview"
@@ -296,13 +302,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/7"
         >
           <div
             class="wrapImage"
@@ -311,14 +318,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_7.jpg"
             />
             <span
               class="rating"
             >
-              79
+              79.0
             </span>
             <div
               class="preview"
@@ -340,13 +347,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/8"
         >
           <div
             class="wrapImage"
@@ -355,14 +363,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_8.jpg"
             />
             <span
               class="rating"
             >
-              79
+              79.0
             </span>
             <div
               class="preview"
@@ -384,13 +392,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/9"
         >
           <div
             class="wrapImage"
@@ -399,14 +408,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_9.jpg"
             />
             <span
               class="rating"
             >
-              53
+              53.0
             </span>
             <div
               class="preview"
@@ -428,13 +437,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/10"
         >
           <div
             class="wrapImage"
@@ -443,14 +453,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_10.jpg"
             />
             <span
               class="rating"
             >
-              53
+              53.0
             </span>
             <div
               class="preview"
@@ -472,13 +482,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/11"
         >
           <div
             class="wrapImage"
@@ -487,14 +498,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_11.jpg"
             />
             <span
               class="rating"
             >
-              58
+              58.0
             </span>
             <div
               class="preview"
@@ -516,13 +527,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/12"
         >
           <div
             class="wrapImage"
@@ -531,14 +543,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_12jpg"
             />
             <span
               class="rating"
             >
-              100
+              100.0
             </span>
             <div
               class="preview"
@@ -560,13 +572,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/13"
         >
           <div
             class="wrapImage"
@@ -575,14 +588,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_13.jpg"
             />
             <span
               class="rating"
             >
-              90
+              90.0
             </span>
             <div
               class="preview"
@@ -604,13 +617,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/14"
         >
           <div
             class="wrapImage"
@@ -619,14 +633,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_14.jpg"
             />
             <span
               class="rating"
             >
-              86
+              86.0
             </span>
             <div
               class="preview"
@@ -648,13 +662,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/15"
         >
           <div
             class="wrapImage"
@@ -663,14 +678,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_15.jpg"
             />
             <span
               class="rating"
             >
-              92
+              92.0
             </span>
             <div
               class="preview"
@@ -692,13 +707,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/16"
         >
           <div
             class="wrapImage"
@@ -707,14 +723,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_16.jpg"
             />
             <span
               class="rating"
             >
-              58
+              58.0
             </span>
             <div
               class="preview"
@@ -736,13 +752,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/17"
         >
           <div
             class="wrapImage"
@@ -751,14 +768,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_17.jpg"
             />
             <span
               class="rating"
             >
-              86
+              86.0
             </span>
             <div
               class="preview"
@@ -780,13 +797,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/18"
         >
           <div
             class="wrapImage"
@@ -795,14 +813,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_18.jpg"
             />
             <span
               class="rating"
             >
-              81
+              81.0
             </span>
             <div
               class="preview"
@@ -824,13 +842,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/19"
         >
           <div
             class="wrapImage"
@@ -839,14 +858,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_19.jpg"
             />
             <span
               class="rating"
             >
-              79
+              79.0
             </span>
             <div
               class="preview"
@@ -868,13 +887,14 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="wrapMovie"
       >
-        <div
+        <a
           class="movieCard"
+          href="/movies/20"
         >
           <div
             class="wrapImage"
@@ -883,14 +903,14 @@ exports[`MovieList should render with search results 1`] = `
               class="overlay"
             />
             <img
-              alt=""
+              alt="movie"
               class="image"
               src="https://image.tmdb.org/t/p/w500/film_20.jpg"
             />
             <span
               class="rating"
             >
-              20
+              20.0
             </span>
             <div
               class="preview"
@@ -912,7 +932,7 @@ exports[`MovieList should render with search results 1`] = `
               </span>
             </p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>

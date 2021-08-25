@@ -9,7 +9,7 @@ exports[`ErrorPage should render 1`] = `
       class="wrapImage"
     >
       <img
-        alt=""
+        alt="error"
         class="image"
       />
     </div>

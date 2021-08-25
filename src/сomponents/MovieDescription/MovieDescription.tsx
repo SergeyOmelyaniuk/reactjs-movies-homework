@@ -1,7 +1,6 @@
 import React from 'react';
 import TopBilledCast from '../TopBilledCast';
 import styles from './MovieDescription.module.scss';
-
 import { Actor, MovieDetails, MovieImages, Language, Genre } from '../../types';
 import TextBlock from '../TextBlock';
 import { translate } from '../../constants';
